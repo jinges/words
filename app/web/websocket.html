@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .msg-box{
+      padding: 10px;
+      height: 400px;
+      overflow: hidden auto;
+    }
+    .msg-box li.current{
+      color: cadetblue;
+    }
+    .msg-box span{
+      font-size: 12px;
+      background: #e8e8e8;
+    }
+    .smg-box p{
+      padding: 6px;
+      color: blue;
+    }
+    .write-msg{
+      padding: 0 10px;
+    }
+    .write-msg *{
+      padding: 10px;
+    }
+    .loadding{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #fff;
+      line-height: 2;
+      text-align: center;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="msg-box">
+    <ul id="msg_list">
+    </ul>
+  </div>
+  <div class="write-msg">
+    <input type="text">
+    <button class="subBtn" id="subBtn">发送</button>
+  </div>
+  <div class="load-box">
+    <p class="loadding">等待加入游戏</p>
+  </div>
+<script type="text/javascript" src="./assets/js/app.min.js"></script>
+<script>
+  var userId = 'U' + (new Date()).getTime();
+  var client = {userId: userId};
+  var msgList = document.querySelector('#msg_list');
+  var robot = '';
+  var socket = new WebSocket('wss://pk.ciwong.com', ["protocol1"])
+  //var socket = new WebSocket('wss://192.168.18.239', ["protocol1"])
+  
+
+  // send.code{
+  //   0: '申请加入',
+  //   1: '传输数据',
+  //   2, '游戏结束'
+  // }
+
+  // message.code {
+  //   0: '等待',
+  //   1: '开始游戏',
+  //   2: '传输数据',
+  //   3: '游戏结束'
+  // }
+
+  socket.addEventListener('open', function(event){
+    console.log('websocket is open now.')
+    sendMsg({
+      code: 0,
+      client: client,
+      msg: 'apply game'
+    })
+  })
+
+  socket.addEventListener('message', function(event){
+    var data = event.data;
+    console.error('-----------------------')
+    console.log(data.msg)
+    var obj = JSON.parse(data);
+      switch (obj.code) {
+        case 0:
+          waitingGame(obj)
+          break;
+        case 1:
+          startGame(obj)
+          break;
+        case 2:
+          getMsg(obj)
+          break;
+        case 3:
+          leaveGame(obj)
+          break;
+        default:
+          waitingGame(obj)
+      }
+  })
+
+  function sendMsg(message){
+    socket.send(JSON.stringify(message))
+  }
+
+  function waitingGame(data) {
+    client.houseId = data.houseId;
+    console.log(client)
+    robot = withRobot();
+    document.querySelector('.load-box').style.display = 'block';
+  }
+
+  function startGame(data){
+    console.log(data)
+    clearTimeout(robot)
+    document.querySelector('.load-box').style.display = 'none';
+  }
+
+  function leaveGame(data){
+    console.log('Game over!')
+  }
+
+  function withRobot(){
+    let waitingRobot = setTimeout(function(){
+      var message = {
+        code: 3,
+        houseId: client.houseId,
+        userId: client.userId
+      }
+      sendMsg(message)
+    }, 5000)
+    return waitingRobot
+  }
+  
+
+  document.querySelector('#subBtn').addEventListener('click', function(event){
+    const msg = event.target.previousElementSibling.value
+    if(!msg.length) {
+      return false;
+    }
+    //手动触发推送消息
+    var message = {
+      code: 1,
+      msg: msg,
+      houseId: client.houseId,
+      userId: client.userId
+    }
+    sendMsg(message)
+    event.target.previousElementSibling.value = '';
+  })
+
+  function getMsg(data){
+    console.log( data)
+    var li = document.createElement('li');
+    var span = document.createElement('span');
+    var p = document.createElement('p');
+
+    span.innerText = data.userId;
+    if(client.userId == data.userId) {
+      li.className = 'current'
+    }
+    p.innerText = data.msg;
+    li.append(span);
+    li.append(p);
+
+    msgList.append(li);
+  }
+
+  function getResource(houseId){
+    $.get('http://192.168.18.239/game/resource', {houseId: houseId}, function(res){
+      console.log(res)
+    })
+  }
+  </script>
+</body>
+</html>

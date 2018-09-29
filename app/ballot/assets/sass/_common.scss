@@ -1,0 +1,176 @@
+.pannel{
+	background: #fff;
+	border: 2px solid #643700;
+}
+.pannel-list{
+	clear: both;
+	span{
+		height: px2rem(68px);
+		line-height: px2rem(68px);
+		font-size: px2rem(24px);
+		color: #666;
+		width: 22%;
+		padding-left: px2rem(20px);
+		border-bottom: 1px solid #ddd;
+		position: relative;
+		&:last-child{
+			width: 34%;
+			&:after{
+				content: '';
+				width: px2rem(20px);
+				height: px2rem(30px);
+				display: block;
+				position: absolute;
+				background: url(../img/arrow_gray.png);
+				background-size: 100% 100%;
+				margin: px2rem(-50px) 0 0 0;
+				right: px2rem(60px);
+			}
+		}
+	}
+}
+.tip{
+	letter-spacing: 0;
+	color: #ff5b35;
+	height: px2rem(100px);
+	line-height: px2rem(80px);
+	padding-top: px2rem(20px);
+	span{
+		font-size: px2rem(28px);
+		width: px2rem(220px);
+		padding-left: px2rem(30px);
+		display: inline-block;
+		background: url(../img/tip.png) 0 0 no-repeat;
+		background-size: 100%;
+		float: left;
+	}
+	p{
+		font-size: px2rem(22px);
+		display: inline-block;
+		float: left;
+		color: #383838;
+	}
+	&:after{
+		clear: both;
+	}
+}
+.tip2{
+	@extend .tip;
+	width: auto;
+	height: px2rem(80px);
+	line-height: px2rem(70px);
+	span{
+		width: auto;
+		height: px2rem(70px);
+		padding-left: 0;
+		padding-right: px2rem(50px);
+		background: url(../img/star.png) right 0 no-repeat;
+		background-size: px2rem(40px);
+	}
+}
+.banner-pannel{
+	position: relative;
+}
+.banner{
+	width: 100%;
+	display: block;
+	.banner-body{
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		li{
+			width: 100%;
+			position: absolute;
+		}
+	}
+	.banner-number{
+		position: absolute;
+		margin-top: px2rem(-160px);
+		z-index: 2000;
+		width: 100%;
+		height: px2rem(20px);
+		display: block;
+		text-align: center;
+		li{
+			width: px2rem(20px);
+			height: px2rem(20px);
+			margin: 0 px2rem(10px);
+			display: inline-block;
+			background: #fff;
+			-webkit-border-radius: px2rem(20px);
+			border-radius: px2rem(20px);
+			border: 1px solid #fff;
+			&.current{
+				background: #f00;
+				border: 1px solid #B10303;
+			}
+		}
+	}
+}
+.banner-title{
+	width: 100%;
+	height: px2rem(60px);
+	line-height: px2rem(60px);
+	font-size: px2rem(26px);
+	color: #fff;
+	padding-left: px2rem(30px);
+	position: absolute;
+	margin-top: px2rem(-60px);
+	background: rgba(0,0,0,.35);
+	span{
+		padding: 0 10px;
+	}
+	em{
+		color: #ff0;
+	}
+}
+.buttoner{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0 !important;
+	margin: 0;
+	border-width: 2px 0;
+	.button{
+		background: #ff5b35;
+	}
+}
+.prize{
+	clear: both;
+	margin-bottom: px2rem(20px);
+	position: relative;
+	overflow: hidden;
+	p{
+		height: px2rem(60px);
+		line-height: px2rem(60px);
+		display: block;
+		background: #fff;
+		text-align: center;
+		font-size: px2rem(26px);
+		span{
+			color: #f00;
+			padding-right: px2rem(10px);
+		}
+	}
+	$tagcolors: #ffaf14 #ff6639 #28c0ff #12c190;
+	.tag{
+		position: absolute;
+		color: #fff;
+		font-size: px2rem(20px);
+		height: px2rem(40px);
+		line-height: px2rem(40px);
+		display: block;
+		width: px2rem(160px);
+		right: px2rem(0px);
+		background:#f00;
+		text-align: center;
+		-webkit-transform: translate(px2rem(44px), px2rem(14px)) rotate(45deg);
+		transform: translate(px2rem(44px), px2rem(14px)) rotate(45deg);
+
+		@for $i from 1 to length($tagcolors) + 1 {
+			&.tag#{$i - 1}{
+				background: nth($tagcolors, $i)
+			}
+		}
+	}
+}

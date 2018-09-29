@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/app.min.css">
+</head>
+
+<body><div>
+  <input id="input" type="textarea" value="这是一条测试内容" />
+  <button id="copy">Copy</button>
+
+  <button id="cut"> cut </button>
+</div>
+  <div>
+    <textarea style="float:left" name="output" id="output" cols="23" rows="6"></textarea>
+    <button id="paste">Paste</button>
+  </div>
+  <script>
+    function copy() {
+      var copyText = document.querySelector("#input");
+      copyText.select();
+      document.execCommand("Copy");
+    }
+
+    function paste() {
+      var pasteText = document.querySelector("#output");
+      pasteText.focus();
+      document.execCommand("Paste");
+    }
+
+    function cut() {
+      var cutText = document.querySelector('#input');
+      cutText.select();
+      document.execCommand('Cut')
+    }
+
+
+    document.querySelector("#copy").addEventListener("click", copy);
+    document.querySelector("#paste").addEventListener("click", paste);
+    document.querySelector("#cut").addEventListener('click', cut)
+  </script>
+<div class="impowerBox" id="login_container"></div>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js">
+</script>
+
+<script>
+  var obj = new WxLogin({
+    self_redirect: false,
+    id: "login_container",
+    appid: "wx394750ccb10010eb",
+    scope: "snsapi_login",
+    redirect_uri: "http://t.ciwong.com/wechat/getToken?wechatId=8",
+    state: "9",
+    style: "white",
+    href: ""
+  });
+</script>
+<script>
+
+  navigator.serviceWorker.register('sw.js').then(function (registration) {
+    // 注册成功
+    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+  }).catch(function (err) {
+    console.log(222, err)
+  })
+</script>
+<script src="./assets/js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <style lang="">
+      *{padding: 0;margin: 0}
+      body{ background: #343c48}
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+
+      function init(obj){
+        var canvas = document.querySelector('#canvas');
+        var ctx = canvas.getContext('2d')
+        var outer_colors = ['#52cc8f','#5499cc', '#ff6969', '#ffc869']
+        var inner_colors = ['#219c4b', '#22559c', '#ff2e2e', '#ff952e']
+        var start = 0;
+        var arrText = ['正   确', '半   对', '错   误', '待批改']
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerWidth;
+
+        var data = obj.data;
+        var count = 0;
+        var x = canvas.width / 2 - 160;
+        var y = canvas.height / 2 - 160;
+
+        for(var item of data) {
+          count += item;
+        }
+        computedParams(data, ctx, x, y, outer_colors, start, count, canvas.width / 2 - 260)
+        computedParams(data, ctx, x, y, inner_colors, start, count, canvas.width / 2 - 320)
+        drawCircle(ctx, x, y, canvas.width / 2 - 360, 0, 1, '#2c333d')
+
+        drawText(data, ctx, x + 300, y - 160, arrText, outer_colors)
+
+        
+        ctx.font = "76px Arial";
+        ctx.fillStyle = '#fff';
+        ctx.fillText('45%', x - 64, y - 10);
+        ctx.font = "46px Arial";
+        ctx.fillText('正确率', x - 60, y + 50);
+      }
+
+      function computedParams(data, ctx, x, y, colors, start, count, r){
+        for (var i = 0, len = data.length; i < len; i++) {
+          var item = data[i];
+          var color = colors[i];
+          var end = item / count
+          drawCircle(ctx, x, y, r, start, start + end, color)
+          start += item / count;
+        }
+      }
+
+      function drawText(data, ctx, x, y, arrText, colors){
+        for (var i = 0, len = data.length; i < len; i++) {
+          var item = data[i];
+          var color = colors[i];
+          var text = arrText[i]
+          var _y = y + i * 100
+          drawCircle(ctx, x, _y, 16, 0, 1, color)
+          ctx.font = "36px Arial";
+          ctx.fillStyle = '#fff';
+          ctx.fillText(text+ '  ' + item + '  人', x + 40, _y + 12);
+        }
+      }
+
+      function drawCircle(ctx, x, y, r, start, end, color){
+        ctx.beginPath();
+        ctx.lineWidth = 0;
+        ctx.moveTo(x, y);
+        ctx.arc(x, y, r, Math.PI * 2 * start, Math.PI * 2 * end)
+        ctx.fillStyle = color;
+        ctx.lineTo(x, y)
+        ctx.fill();
+        ctx.save();
+      }
+
+      var data = {
+        data: [35, 5, 25, 10]
+      }
+
+      init(data)
+    </script>
+  </body>
+</html>

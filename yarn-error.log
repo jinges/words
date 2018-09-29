@@ -1,0 +1,56 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add gulp -g
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files (x86)\OpenVPN\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Users\Administrator.DESKTOP-669VQO7\AppData\Local\Microsoft\WindowsApps;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Administrator.DESKTOP-669VQO7\AppData\Local\Yarn\bin;C:\Users\Administrator.DESKTOP-669VQO7\AppData\Roaming\npm;C:\Users\Administrator.DESKTOP-669VQO7\AppData\Local\Programs\Fiddler
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  8.9.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "web_server",
+    "version": "1.0.0",
+    "description": "web",
+    "main": "gulpfile.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "fengliang",
+    "license": "ISC",
+    "devDependencies": {
+      "del": "^3.0.0",
+      "domino": "^1.0.25",
+      "gulp": "^3.9.1",
+      "gulp-babel": "^7.0.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-connect": "^5.0.0",
+      "gulp-content-includer": "0.0.7",
+      "gulp-imagemin": "^4.0.0",
+      "gulp-jshint": "^2.0.4",
+      "gulp-livereload": "^3.8.1",
+      "gulp-minify-css": "^1.2.4",
+      "gulp-minify-html": "^1.0.6",
+      "gulp-rename": "^1.2.2",
+      "gulp-uglify": "^3.0.0",
+      "gulp-utf8-convert": "0.0.7",
+      "jshint": "^2.9.5",
+      "opn": "^5.1.0"
+    },
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir 'E:\web\node_modules\base'

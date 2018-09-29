@@ -1,0 +1,25 @@
+.middle {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.hide{
+  display: none;
+}
+
+.game_bg {
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #40a4f8 url(./../img/scan_bg.svg) 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+@import './../../components/scan/scan';
+@import './../../components/start/start';
+@import './../../components/header/header';
+@import './../../components/word/word';
+

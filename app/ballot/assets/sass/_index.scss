@@ -1,0 +1,30 @@
+.index{
+	padding: 0 px2rem(30px) px2rem(80px);
+	.ranking{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		background: none;
+		color: #666;
+		height: px2rem(80px);
+		line-height: px2rem(80px);
+	}
+	.join-btn{
+		background:#28c0ff;
+		border: 2px solid #0087d5;
+	}
+	.disc{
+		font-size: px2rem(25px);
+		width: 100%;
+		clear: both;
+		p{
+			line-height: px2rem(36px);
+			padding: 0 px2rem(10px)  px2rem(10px) 0;
+		}
+		.qr{
+			width: px2rem(190px);
+			height: px2rem(190px);
+			border:1px solid #dcdcdc;
+		}
+	}
+}

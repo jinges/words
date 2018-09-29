@@ -1,0 +1,9 @@
+<svg  id="progress_box"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    .pro1{
+      transform: rotate(-90deg)
+    }
+  </defs>
+  <circle cx="100" cy="100" r="80" stroke ="#2E7D32" stroke-width="10" fill="none"></circle>
+  <circle cx="100" cy="100" r="81" stroke="#fff" stroke-width="10" fill="#fff" stroke-linecap="square"  ></circle>
+</svg>

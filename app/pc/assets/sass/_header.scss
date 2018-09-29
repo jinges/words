@@ -1,0 +1,36 @@
+
+.header{
+		height: px2rem(140px);
+		padding: px2rem(40px) 12% 0;
+		position: absolute;
+		width: 100%;
+		z-index: 1000;
+	.logo{
+		width: px2rem(315px);
+		height: px2rem(100px);
+		float: left;
+	}
+	.header-nav{
+		float: right;
+		padding-top: px2rem(20px);
+		li{
+			float: left;
+			padding: 0 px2rem(10px);
+			text-align: center;
+			font-size: px2rem(28px);
+			a{
+				height: px2rem(50px);
+				line-height: px2rem(30px);
+				@include radius(40px);
+				padding: px2rem(10px) px2rem(20px);
+				width: px2rem(170px);
+				display: block;
+			}
+			&.active, &:hover{
+				a{
+					background: $baseColor;
+				}
+			}
+		}
+	}
+}

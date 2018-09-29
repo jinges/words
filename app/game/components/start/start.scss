@@ -1,0 +1,15 @@
+.start_box {
+  .pk_logo {
+    width: px2rem(240px);
+    height: px2rem(240px);
+    display: block;
+    background: url('./../img/vs.png') 0 0 no-repeat;
+    background-size: cover;
+    position: absolute;
+    @extend .middle;
+    margin: auto;
+    @include scales(0, 0);
+    -webkit-animation: vs_show 5s .6s ease-in-out;
+    animation: vs_show 5s .6s ease-in-out;
+  }
+}

@@ -1,0 +1,7 @@
+.select {
+  @extend .text;
+  option{
+  height: px2rem(80px);
+  line-height: px2rem(80px);
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #svgForStroke {
+      width: 200px;
+      height: 200px;
+      stroke-dasharray: 180%;
+      stroke-dashoffset: 0%;
+      stroke: #ED6E5C;
+      /*stroke-linecap:round;*/
+      fill: none;
+      /* -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg); */
+    }
+
+    </style>
+</head>
+
+<body>
+  <!-- <svg width="100" height="100">
+  <circle cx='50' cy='50' r='40' stroke="green" stroke-width='4' fill="yellow" />
+    <rect x='120' y="10" rx="100" ry="20" width='100' height='100' style="fill: rgb(0,0,255); stroke-width: 3; stroke: rgb(0,0,0);fill-opacity:0.1;stroke-opacity:0.6"
+    />
+    <ellipse cx='400' cy='50' rx='100' ry='40' style="fill: yellow; stroke:turquoise; stroke-width: 2px;" />
+    <line x1='10' y1="200" x2="200" y2="140" style="stroke:sienna; stroke-width: 2" />
+
+    <defs>
+      <radialGradient id="f1">
+        <stop offset="5%" stop-color="#F00" />
+        <stop offset="85%" stop-color="#ff0" />
+      </radialGradient>
+      <linearGradient id="f2">
+        <stop offset="5%" stop-color="#F00" />
+        <stop offset="75%" stop-color="#ff0" />
+      </linearGradient>
+      <pattern id="f3" patternUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+        <rect x="0" y="0" width="25" height="25" stroke="#none" fill="#09f"></rect>
+      </pattern>
+    </defs>
+
+    <polygon id="haha" points=" 600, 10 500, 100 560, 180 800, 140" style="stroke:steelblue; stroke-width: 4;fill-rule:evenodd;"
+      fill="url(#f1)" />
+    <line x1='600' y1='10' x2='560' y2='180' style="stroke: steelblue; stroke-width: 4;" />
+    <circle cx='650' cy='110' r='40' style="fill: url(#f3)" />
+    <text x='630' y='120' transform="rotate(-10, 650, 110)" style="font-size: 40px; fill: #ffffff;">王</text>
+    <use xlink:href="#haha" x="40" y="180" style="fill: #000" />
+
+  <path d="M 0 0  H 100" style="stroke:dodgerblue; stroke-width: 4" />
+<path d="M 0 100  H 200" style="stroke:deeppink; stroke-width: 4" />
+<path d="M 0 0  V 100" style="stroke:dodgerblue; stroke-width: 4" />
+<path d="M 0 0  L 100 100" style="stroke:dodgerblue; stroke-width: 4" />
+<path d="M 0 100  C 40 140, 60 140, 100 100 S150 70, 200 100" style="stroke:dodgerblue; stroke-width: 2; fill: none;" />
+<path d="M 0 100  Q 50 150, 100 100 T 200 100" style="stroke:darkorange; stroke-width: 2; fill: none;" />
+
+
+  <defs>
+<mask id="mask1">
+<rect x="10" y="10" width="150" height="150" fill="#ccc" />
+<rect x="160" y="160" width="50" height="50" fill="#fff" />
+  </mask>
+</defs>
+<rect x='10' y='10' width="200" height="200" fill="#0f0" />
+<rect x='10' y='10' width="200" height="200" fill="#f00"  mask="url(#mask1)"/>
+  <path d="M100 100, L100 50, A50 50 0 0 0 50 100, Z" style="fill: #fa0" />
+<path d="M100 100, L100 50, A50 50 0 1 1 50 100, Z" style="fill:dodgerblue" />
+
+   <defs>
+  <marker id="r" viewBox="0 0 40  40" refX="20" refY="20" markerWidth="20" markHeight="20">
+    <circle cx="20" cy="20" r="10" fill="#09f"/>
+  </marker>
+</defs>
+<polyline points="10 195, 40 15, 70 28, 100 14, 130 43, 160 29, 190 34, 220 13, 250 29, 280 164, 330 63, 360 29" style="stroke: darkgrey; stroke-width: 2;fill: none;"
+ marker-end="url(#r)" marker-start="url(#r)" marker-mid="url(#r)"
+/>
+<path d="M10 195 C40 15, 70 28, 100 14, 130 43, 160 29, 190 34, 220 13, 250 29, 280 164, 330 63, 360 29" style="stroke: darkgrey; stroke-width: 2;fill: none;"
+  marker-end="url(#r)" marker-start="url(#r)" marker-mid="url(#r)" />
+  
+
+<rect fill="none" width="60" height="50" x="10" y="50" stroke="#000" stroke-width="2" />
+<rect fill="#c00" width="60" height="50" x="10" y="50" transform="matrix(2,0,0,2,50,20)" />
+<rect fill="#c0f" width="60" height="50" x="10" y="50" transform="matrix(2,0,0,3,0,0)" />
+
+<rect fill="#09c" width="60" height="50" x="60" y="10" transform="matrix(0.866,0.5,-0.5,0.866,0,0)" />
+<rect fill="#09c" width="60" height="50" x="60" y="10" transform="translate(60,10) matrix(0.866,0.5,-0.5,0.866,0,0) translate(-60,-10) "
+/>
+  <rect fill="none" width="60" height="50" x="60" y="10" stroke="#000" stroke-width="2" />
+
+  <rect fill="none" width="60" height="50" x="60" y="10" stroke="#000" stroke-width="2" />
+<rect fill="#09c" width="60" height="50" x="60" y="10" transform="translate(60,10) matrix(0.866,0.5,-0.5,0.866,0,0) translate(-60,-10) "
+/>
+<rect fill="#f00" width="60" height="50" x="60" y="10" stroke="#000" stroke-width="2" transform="matrix(1,0,0,1,0,0)" /> 
+ </svg> -->
+  <svg width="400" height="200">
+    <defs>
+      <rect id="rect" width="100" height="50" x='10' y='10' fill="#09f" />
+      <path id="path1" d="M0 50 C150 150 100 -50 300 50" stroke="#09f" fill="null" />
+    </defs>
+    <use xlink:href="#rect" />
+    <use xlink:href="#rect" x="110" />
+    <text>
+      <textPath xLink:href="#path1">这是一个随机的字符串吧这是一个随机的字符串吧这是一个随机的字符串吧</textPath>
+    </text>
+
+    <defs>
+      <clipPath id="a1">
+        <rect x="0" y="0" width="200" height="100" />
+      </clipPath>
+    </defs>
+    <circle cx="100" cy="100" r="100" clip-path="url(#a1)" fill="#000" />
+
+    <defs>
+      <filter width="200" height="200" x="0" y="0" id="blur" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="8" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="70" height="70" fill="#a00" filter=url( "#blur") />
+  </svg>
+
+  <svg width="400" height="200">
+    <rect width="50" height="50" x="10" y="10" fill="#c00">
+      <set attributeName="x" to="40" begin="2s">
+    </rect>
+    <rect width="50" height="50" x="10" y="10" fill="none" stroke="#000" />
+    <rect id="r1" width="60" height="60" x="50" y="50" fill="#c00" />
+    <animate xLink:href="#r1" dur="2s" attributeName="x" repeatCount="indefinite" to="100" />
+
+    <rect id="r2" width="60" height="60" x="100" y="100" fill="#f00" stroke="#000" stroke-width="4" />
+    <animate xLink:href="#r2" dur="2s" attributeName="y" repeatCount="indefinite" to="100" />
+  </svg>
+  <svg width="300px" height="100px">
+    <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
+    <circle id="c1" cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1" />
+    <animate xLink:href="#c1" attributeName="cx" from="0" to="100" dur="5s" repeatCount="indefinite" />
+  </svg>
+  <svg width="400px" height="200px">
+    <path fill="none" stroke="#000" d="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3"
+    />
+    <rect id="box" width="10" height="10" x="0" y="-10" fill="#09c" />
+    <animateMotion xLink:href="#box" dur="9s" path="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3"
+      repeatCount="indefinite" rotate="auto" />
+  </svg>
+  <svg width="400" height="200">
+    <rect id="r4" width="80" height="40" x="0" y="10" fill="#a00" />
+    <rect id="c3" width="60" height="60" x="0" y="60" fill="#0c0">
+      <animate xLink:href="#c3" dur="2s" attributeName="x" to="300" fill="remove" begin="r4.click" />
+  </svg>
+
+  <svg width="240" height="160">
+    <defs>
+      <pattern id="p" patternUnits="objectBoundingBox" width=".4" height=".4">
+        <rect width="30" height="30" fill="#f99" x="0" y="0"></rect>
+      </pattern>
+    </defs>
+
+<rect width="240" height="160" stroke="#aaa" stroke-width='4' fill="url(#p)" />
+<circle cx="150" cy="80" r="50" stroke="#0a0" stroke-width="2" fill="url(#p)" />
+<rect width="100" height="100" x="1" y="1" stroke="#00f" stroke-width="2" fill="url(#p)" />
+<rect width="80" height="80" x="1" y="100" stroke="#f0f" stroke-width="2" fill="url(#p)" />
+  </svg>
+
+  <svg width="240" height="160">
+    <defs>
+      <pattern id="p1" patternUnits="objectBoundingBox" width=".2" height=".4" patternTransform="rotate(45)">
+        <rect width="10" height="50" fill="#000" x="0" y="0"></rect>
+        <rect width="10" height="50" fill="#fa0" x="10" y="0"></rect>
+      </pattern>
+    </defs>
+
+    <rect width="100" height="100" x="10" y="30" stroke="#000" stroke-width="2" fill="url(#p1)" />
+  </svg>
+<svg width="340" height="231">
+  <defs>
+    <filter id="f" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox" x="0" y="0" width="1.1" height="1.1">
+      <feImage result="pict1" xlink:href="#m1" x="0" y="0" width="1.1" height="1.1"></feImage>
+      <feImage result="pict2" xlink:href="#m2" x="0" y="0" width="1.1" height="1.1"></feImage>
+      <feDisplacementMap id="fdm" scale=".1" xChannelSelector="R" yChannelSelector="R" in2="pict2" in="pict1"></feDisplacementMap>
+    </filter>
+    <radialGradient id="g" cx=".6" cy=".6" r=".05" spreadMethod="reflect">
+      <stop offset="0" stop-color="#000"></stop>
+      <stop offset="1" stop-color="#fff"></stop>
+    </radialGradient>
+    <rect id="m2" x="-10" y="0" width="410" height="300" fill="url(#g)"></rect>
+<image id="m1" x="0" y="0" width="400" height="300" xlink:href="http://ciwong.com/xuexiao/img/map.png"></image>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" filter="url(#f)" transform="translate(-60 -60)"></rect>
+</svg>
+
+<svg width="400" height="400" >
+  <circle cx="100" cy="100" r="80" stroke="#fa0" stroke-width="8" fill="none" />
+</svg>
+
+<svg  id="svgForStroke" width="200" height="200">
+  <circle cx="50%" cy="50%" r="30%" stroke-width="10%"></circle>
+</svg>
+
+<svg width="440" height="440">
+  <circle cx="220" cy="220" r="100" stroke-width="50" stroke="#D1D3D7" fill="none"></circle>
+  <circle cx="220" cy="220" r="100" stroke-width="50" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,440)" stroke-dasharray="628.3185307179587 * 0.4 628.3185307179587 * 0.6"></circle>
+</svg>
+<script>
+
+</script>
+</body>
+
+</html>

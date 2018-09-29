@@ -1,0 +1,92 @@
+<svg id="scan" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1024 1024">
+  <g>
+    <defs>
+      <style>
+        .cls-1, .cls-2, .cls-3, .cls-4 {
+          fill: #fff;
+        }
+
+        .cls-1 {
+          opacity: 0.1;
+          filter: url(#filter);
+        }
+
+        .cls-2 {
+          fill-opacity: 0;
+          stroke: #fff;
+          stroke-linejoin: round;
+          stroke-opacity: 0.8;
+          stroke-width: 1px;
+        }
+
+        .cls-3 {
+          opacity: 0.3;
+          filter: url(#filter-2);
+        }
+
+        .cls-4 {
+          opacity: 0.5;
+          filter: url(#filter-3);
+        }
+      </style>
+      <filter id="filter" x="0" y="0" width="100%" height="100%" filterUnits="userSpaceOnUse">
+        <feGaussianBlur result="blur" stdDeviation="33.333" in="SourceAlpha"/>
+        <feComposite result="composite"/>
+        <feComposite result="composite-2"/>
+        <feComposite result="composite-3"/>
+        <feFlood result="flood" flood-color="#629bb9"/>
+        <feComposite result="composite-4" operator="in" in2="composite-3"/>
+        <feBlend result="blend" in2="SourceGraphic"/>
+        <feBlend result="blend-2" in="SourceGraphic"/>
+      </filter>
+      <filter id="filter-2" x="0" y="0" width="100%" height="100%" filterUnits="userSpaceOnUse">
+        <feGaussianBlur result="blur" stdDeviation="35.333" in="SourceAlpha"/>
+        <feComposite result="composite"/>
+        <feComposite result="composite-2"/>
+        <feComposite result="composite-3"/>
+        <feFlood result="flood" flood-color="#85b5ad" flood-opacity="0.3"/>
+        <feComposite result="composite-4" operator="in" in2="composite-3"/>
+        <feBlend result="blend" in2="SourceGraphic"/>
+        <feBlend result="blend-2" in="SourceGraphic"/>
+      </filter>
+      <filter id="filter-3" x="0" y="0" width="100%" height="100%" filterUnits="userSpaceOnUse">
+        <feGaussianBlur result="blur" stdDeviation="35.333" in="SourceAlpha"/>
+        <feComposite result="composite"/>
+        <feComposite result="composite-2"/>
+        <feComposite result="composite-3"/>
+        <feFlood result="flood" flood-color="#85b5ad" flood-opacity="0.3"/>
+        <feComposite result="composite-4" operator="in" in2="composite-3"/>
+        <feBlend result="blend" in2="SourceGraphic"/>
+        <feBlend result="blend-2" in="SourceGraphic"/>
+      </filter>
+    </defs>
+    <circle id="椭圆_2" data-name="椭圆 2" class="cls-1" cx="512" cy="512" r="418"/>
+    <circle id="椭圆_2_拷贝_3" data-name="椭圆 2 拷贝 3" class="cls-2" cx="512" cy="512" r="418"/>
+    <circle id="椭圆_2_拷贝" data-name="椭圆 2 拷贝" class="cls-3" cx="512" cy="512" r="328"/>
+    <circle id="椭圆_2_拷贝_4" data-name="椭圆 2 拷贝 4" class="cls-2" cx="512" cy="512" r="328"/>
+    <circle id="椭圆_2_拷贝_2" data-name="椭圆 2 拷贝 2" class="cls-4" cx="512" cy="512" r="238"/>
+  </g> 
+
+  <g>
+    <defs>
+      <style>
+        .cls-11 {
+          fill-rule: evenodd;
+          fill: url(#linear-gradient);
+        }
+      </style>
+      <linearGradient id="linear-gradient" x1="0" y1="0" x2="1" y2="0.6" gradientUnits="objectBoundingBox">
+        <stop offset="0" stop-color="#ffe9b4"/>
+        <stop offset="1" stop-color="#ffe9b4" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path id="2016" fill="url(#linear-gradient)"
+      d="M512,512 
+      l-72.585, 411.65
+      a418 418, 0 0 0, 180.771 -7.89
+      a418 418, 0 0 0, 176.89 -98.051
+      Z" >
+    <animateTransform dur="2s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,512,512" to="360,512,512"/> 
+    </path>
+  </g>
+</svg>

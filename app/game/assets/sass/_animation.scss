@@ -1,0 +1,85 @@
+@include keyframes(current_join){
+  0%{
+    @include translates(-34vw)
+  }
+  10% {
+    @include translates(10vw)
+  }
+  25% {
+    @include translates(0)
+  }
+  80% {
+    @include translates(0)
+  }
+  90% {
+    @include transforms(-54vw, 0, 0, .7)
+  }
+  100% {
+    @include transforms(0, 0, 0, .7)
+  }
+}
+
+
+@include keyframes(other_join) {
+  0% {
+    @include translates(34vw);
+    right: 0;
+    bottom: px2rem(60px);
+    position: absolute;
+  }
+
+  10% {
+    @include translates(-10vw);
+    right: 0;
+    bottom: px2rem(60px);
+    position: absolute;
+  }
+
+  15% {
+    @include translates(0);
+    right: 0;
+    bottom: px2rem(60px);
+    position: absolute;
+  }
+
+  80% {
+    @include translates(0);
+    right: 0;
+    bottom: px2rem(60px);
+    position: absolute;
+  }
+
+  90% {
+    @include transforms(100vw, 0, 0, .7);
+    right: 0;
+    bottom: px2rem(60px);
+    position: absolute;
+  }
+
+  91% {
+    @include transforms(100vw, 0, 0, .7);
+    position: inherit;
+  }
+
+  100% {
+    @include transforms(0, 0, 0, .7)
+  }
+}
+
+@include keyframes(vs_show) {
+  0%{
+    @include scales(0, 0)
+  }
+  10%{
+    @include scales(1.4,1.4)
+  }
+  20% {
+    @include scales(1, 1)
+  }
+  80% {
+    @include scales(1, 1)
+  }
+  100% {
+    @include scales(0, 0)
+  }
+}

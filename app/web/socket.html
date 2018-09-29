@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .msg-box{
+      padding: 10px;
+      height: 400px;
+      overflow: hidden auto;
+    }
+    .msg-box li.current{
+      color: cadetblue;
+    }
+    .msg-box span{
+      font-size: 12px;
+      background: #e8e8e8;
+    }
+    .smg-box p{
+      padding: 6px;
+      color: blue;
+    }
+    .write-msg{
+      padding: 0 10px;
+    }
+    .write-msg *{
+      padding: 10px;
+    }
+    .loadding{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #fff;
+      line-height: 2;
+      text-align: center;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="msg-box">
+    <ul id="msg_list">
+    </ul>
+  </div>
+  <div class="write-msg">
+    <input type="text">
+    <button class="subBtn" id="subBtn">发送</button>
+  </div>
+  <div class="load-box">
+    <p class="loadding">等待加入游戏</p>
+  </div>
+  <script src="./socket.io.js"></script>
+  <script>
+    var socket = io('ws://192.168.18.239:3000');
+    var userName = 'U' + (new Date()).getTime();
+    var socketId = '';
+    var houseId = 0;
+    var msgList = document.querySelector('#msg_list');
+    var isJoined = false;
+    socket.on('connect', function () {
+      socketId = socket.id;
+      console.log('first connect');
+    });
+
+    socket.on('connect_ok', function (data) {
+      console.log(data)
+
+      socket.emit('join_game', {
+        userName: userName,
+        socketId: socketId
+      })
+    });
+
+    socket.on('game_wait', function (data) {
+      console.log(data)
+    });
+
+    socket.on('game_ready', function (data) {
+      console.log(data)
+      isJoined = true;
+      houseId = data.houseId;
+      document.querySelector('.load-box').style.display = 'none';
+    });
+
+    document.querySelector('#subBtn').addEventListener('click', function(event){
+      const msg = event.target.previousElementSibling.value
+      if(!msg.length) {
+        return false;
+      }
+      var i = 0;
+      //手动触发推送消息
+      socket.emit('game_push_msg', {
+        houseId: houseId,
+        userName: userName,
+        msg: msg,
+        i: i++
+      })
+      event.target.previousElementSibling.value = '';
+    })
+
+    socket.on('game_msg', function(data){
+      var li = document.createElement('li');
+      var span = document.createElement('span');
+      var p = document.createElement('p');
+
+      span.innerText = data.userName;
+      if(userName == data.userName) {
+        li.className = 'current'
+      }
+      p.innerText = data.msg;
+      li.append(span);
+      li.append(p);
+
+      msgList.append(li);
+    })
+
+    socket.on('disconnect', function () { });
+  </script>
+</body>
+</html>

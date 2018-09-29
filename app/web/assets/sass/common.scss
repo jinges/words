@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-width: 0;
+  box-sizing: border-box;
+}
+body{
+  font: 16px 微软雅黑;
+  color: #221f1f;
+}
+
+input, button{
+  float: left;
+  height: 40px;
+  line-height: 32px;
+  padding: 4px;
+  border: 1px solid #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-width: 0;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .btn-link {
+    width: 230px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    background: url(../img/button.png) 0 0 no-repeat;
+    background-size: 100%;
+    margin-bottom: 80px;
+  }

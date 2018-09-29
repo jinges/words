@@ -1,0 +1,32 @@
+<!--include "./components/header.html"-->
+<section class="join">
+	<article>
+		<h1 class="tip"><span>step 1 </span><p>上传3张作品图，一张亲子照</p></h1>
+		<div class="pannel uploader">
+			<ul class="grid flex-warp">
+				<li><div class="upload-icon"><input class="upload-file" id="upload-file" capture="camera" multiple="multiple" type="file"/><span></span></div></li>
+			</ul>
+		</div>
+	</article>
+	<article>
+		<h1 class="tip"><span>step 2</span><p>填写报名信息</p></h1>
+		<div class="form">
+			<div class="pannel">
+				<input type="text" id="childname" class="text" placeholder="请输入姓名 (如：妞妞妈)">
+			</div>
+			<div class="pannel">
+				<input type="tel" id="phone" maxlength="11" id="" class="text" placeholder="请输入联系电话(方便联系到您)>
+			</div>
+			<div class="pannel">
+				<!-- <input type="text" id="birthday" class="text" placeholder="请输入宝宝生日"> -->
+				<select id="birthday" class="text">
+					<option value="">请选择宝宝生日</option>
+				</select>
+			</div>
+		</div>
+		<div class="pannel buttoner">
+			<a class="button" id="join">确认报名</a>
+		</div>
+	</article>
+</section>
+<!--include "./components/footer.html"-->

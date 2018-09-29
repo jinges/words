@@ -1,0 +1,70 @@
+.join{
+	padding: px2rem(10px) px2rem(30px) px2rem(94px) px2rem(30px);
+	.uploader{
+		padding: px2rem(10px);
+		li{
+			padding: px2rem(10px);
+		}
+		.upload-icon{
+			width: 40vw;
+			height: 40vw;
+			background: #eee;
+			float: left;
+			position: relative;
+			border:1px solid #fff;
+			&.done{
+				border: 1px solid #047a20;
+			}
+			&.err{
+				border:1px solid #f50707;
+			}
+			.del{
+			    display: block;
+			    height: 100%;
+			    line-height: 100%;
+			    background: rgba(104, 104, 104, 0.28) url(../img/del.png)  50% 50% no-repeat ;
+			}
+			span{
+				width: px2rem(10px);
+				height: px2rem(10px);
+				display: block;
+		        margin: 0 auto;
+		        top: 50%;
+		        left: 50%;
+		        transform: translate(-50%, -50%);
+		        background:#f00;
+		        position: absolute;
+		        &:before{
+		        	content: '';
+					width: px2rem(50px);
+					height: px2rem(10px);
+					display: block;
+			        margin: px2rem(0px) 0 0 px2rem(-20px);
+			        background:#fff;
+			        position: absolute;
+		        }
+		        &:after{
+		        	content: '';
+					width: px2rem(10px);
+					height: px2rem(50px);
+					display: block;
+			        margin: px2rem(-22px) 0 0 0;
+			        background:#fff;
+			        position: absolute;
+		        }
+			}
+		}
+		.upload-file{
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+		}
+	}
+	.form{
+		.pannel{
+			width: 100%;
+			margin-bottom: px2rem(10px);
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.about{
+	
+	@extend .cooperate;
+	.banner-text{
+		max-width: px2rem(1008px);
+		width: 94%;
+		margin: 22% 0 0 0;
+	}
+}

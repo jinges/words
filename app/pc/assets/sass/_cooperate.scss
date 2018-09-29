@@ -1,0 +1,12 @@
+.cooperate{
+	position: relative;
+	.banner-text{
+		position: absolute;
+		max-width: px2rem(880px);
+		width: 60%;
+		left: 50%;
+		margin: 21% 0 0 0;
+		-webkit-transform: translate(-50%, 0);
+		transform: translate(-50%, 0);
+	}
+}

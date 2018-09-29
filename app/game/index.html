@@ -1,0 +1,26 @@
+<!--include "./layer/header.html"-->
+<div class="center">
+<a href="./words.html">雷达搜索</a>
+
+<span id="test" style="color: #000">点我</span>
+<script>
+  var userObj = {
+    userId: 66668888,
+    name: '大明冯',
+    avatar: 'http://thirdwx.qlogo.cn/mmopen/vi_32/S6mjCOGFiaQfKeeA2FYnoRhYia9nIKictnA6dy1HFl1rkQ7FkBAG0anjymAaU7zk5DoYo8dNcJricEL0bY7mfibKPAw/132'
+  }
+
+  window.localStorage.setItem('user', JSON.stringify(userObj))
+
+  // window.location.href = './words.html';
+</script>
+</div>
+<!--include "./layer/footer.html"-->
+
+<script>
+$(function(){
+  $('#test').on('click', function(){
+    console.log(2222)
+  })
+})
+</script>

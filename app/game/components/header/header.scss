@@ -1,0 +1,70 @@
+.header {
+  padding-top: px2rem(40px);
+
+  .user {
+    font-size: px2rem(26px);
+    width: 36vw;
+    transform: scale(.7);
+
+    .photo_bg {
+      width: 36vw;
+      height: 22vw;
+      background: url(./../img/current_user.svg) right 0 no-repeat;
+      background-size: contain;
+      padding: 2vw 2vw 2vw 15vw;
+
+      .photo {
+        width: 18vw;
+        height: 18vw;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        overflow: hidden;
+      }
+    }
+    .nickname {
+      display: block;
+      padding: px2rem(16px) 0 0;
+      text-align: center;
+    }
+
+    &.current_user {
+      -webkit-animation: current_join 6s ease-in-out;
+      animation: current_join 6s ease-in-out;
+    }
+
+    &.other_user {
+      -webkit-animation: other_join 6s ease-in-out;
+      animation: other_join 6s ease-in-out;
+
+      .photo_bg {
+        background: url(./../img/other_user.svg) 0 0 no-repeat;
+        background-size: contain;
+        padding: 2vw 15vw 2vw 2vw;
+      }
+    }
+  }
+
+  .score_box {
+    text-align: center;
+    @include delay(5s);
+
+    .score {
+      @include setHeight(px2rem(100px));
+      font-size: px2rem(60px);
+    }
+
+    .timer {
+      font-size: px2rem(20px);
+
+      em {
+        padding: 0 px2rem(8px);
+      }
+    }
+
+    &.none {
+      p {
+        display: none;
+      }
+    }
+  }
+}

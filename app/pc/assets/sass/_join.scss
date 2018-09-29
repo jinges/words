@@ -1,0 +1,59 @@
+@import 'cooperate.scss';
+$joinColor: #8a8a8a;
+.join{
+	@extend .cooperate;
+	.banner-text{
+		max-width: px2rem(1336px);
+		width: 70%;
+		margin: 20% 0 0 0;
+	}
+	.container{
+		max-width: px2rem(1080px);
+		margin: auto;
+		font-size: px2rem(20px);
+		.tip{
+			font-size: px2rem(32px);
+			font-weight: 700;
+			padding: px2rem(50px) 0;
+			span{
+				font-size: px2rem(18px);
+				display: block;
+			}
+		}
+		.title{
+			font-size: px2rem(26px);
+			height: px2rem(60px);
+			line-height: px2rem(60px);
+			display: block;
+		}
+		h4{
+			font-size: px2rem(22px);
+			height: px2rem(28px);
+			line-height: px2rem(28px);
+			font-weight: normal;
+			color: $joinColor;
+			i{
+				font-size: px2rem(16px);
+			}
+		}
+		.disc{
+			padding: 0 px2rem(20px) px2rem(40px);
+			li{
+				line-height: px2rem(40px);
+				display: block;
+				color: $joinColor;
+			}
+		}
+		.email{
+			text-align: center;
+			padding: px2rem(50px) 0;
+			img{
+				width: px2rem(80px);
+			}
+			.email-text{
+				line-height: px2rem(30px);
+				padding-bottom: px2rem(30px);
+			}
+		}
+	}
+}

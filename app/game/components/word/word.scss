@@ -1,0 +1,86 @@
+.game_pannel {
+  .pannel_bg {
+    -webkit-animation: bg_show 1s linear;
+    animation: bg_show 1s linear;
+  }
+
+  .progress {
+    width: px2rem(90px);
+    height: px2rem(90px);
+    margin: auto;
+    background: #fff;
+    @include borderRadius(50%);
+    @include rotate(-90);
+
+    svg {
+      vertical-align: top;
+    }
+
+    .progress_body {
+      @include translates(0)
+    }
+
+    .num {
+      transform: rotateZ(90deg) translateY(-176px);
+      transform: rotateZ(90deg) translateY(-176px);
+    }
+  }
+
+  .question {
+    font-size: px2rem(32px);
+    text-align: center;
+    padding: px2rem(40px);
+    width: 100%;
+
+    span {
+      text-align: left;
+      display: inline-block;
+      word-break: break-word;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      height: auto;
+      line-height: 1.6;
+      max-height: px2rem(90px);
+    }
+  }
+
+  .answers {
+    @extend .question;
+    position: absolute;
+    bottom: px2rem(20px);
+
+    li {
+      padding: px2rem(16px) px2rem(50px);
+      background: #fff;
+      color: #232121;
+      @include borderRadius(10px);
+      margin: px2rem(20px) 0;
+
+      &.selected {
+        background: #ff0;
+        color: #fff;
+      }
+
+      &.right {
+        color: #fff;
+        background: #40a4f8;
+      }
+
+      &.error {
+        color: #fff;
+        background: #f00;
+      }
+    }
+
+    span {
+      font-size: px2rem(28px);
+
+      &.double_line {
+        font-size: px2rem(24px);
+        line-height: 1.4;
+      }
+    }
+  }
+}
