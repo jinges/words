@@ -2,3 +2,15 @@
 
 /build
 
+/config/ballot-path.js
+/config/game-path.js
+/config/vote-path.js
+/config/vr-path.js
+/config/web-path.js
+
+/app/ballot
+/app/game
+/app/pc
+/app/vote
+/app/web
+

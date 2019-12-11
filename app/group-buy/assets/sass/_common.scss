@@ -1,0 +1,16 @@
+.tag{
+  width: px2rem(34px);
+  @include setHeight(px2rem(34px));
+  border-radius: 2px;
+  color: #fff;
+  font-size: px2rem(22px);
+  display: inline-block;
+  text-align: center;
+  margin-right: px2rem(10px);
+  &.pin{
+    background: $pin;
+  }
+  &.sheng{
+    background: $red;
+  }
+}

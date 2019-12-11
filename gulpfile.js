@@ -66,7 +66,6 @@ gulp.task('script', function () {
     return gulp.src(paths.origin.script.source)
         .pipe(concat('app.js'))
         .pipe(gulp.dest(paths.origin.script.build))
-        // .pipe(assetRev())
         // .pipe(uglify())
         .pipe(rename({
           extname: '.min.js'
@@ -125,6 +124,14 @@ gulp.task('game-config', function () {
     var vrPath = require('./config/game-path.js');
     paths = vrPath;
 })
+gulp.task('votes-config', function () {
+    var votePath = require('./config/vote-path.js');
+    paths = votePath;
+})
+gulp.task('group-buy-config', function () {
+    var votePath = require('./config/group-buy-path.js');
+    paths = votePath;
+})
 
 gulp.task('web', ['web-config', 'connect', 'watch'], function(){
     opn('http://localhost:8080');
@@ -139,5 +146,15 @@ gulp.task('vr', ['vr-config', 'connect', 'watch'], function () {
 })
 
 gulp.task('game', ['game-config', 'connect', 'watch'], function () {
+    opn('http://localhost:8088');
+})
+gulp.task('votes', ['votes-config', 'connect', 'watch'], function () {
+    opn('http://localhost:8088');
+})
+gulp.task('group-buy', ['group-buy-config', 'connect', 'watch'], function () {
+    
+})
+
+gulp.task('default', ['group-buy'], function(){
     opn('http://localhost:8088');
 })
