@@ -1,69 +1,116 @@
 .goods{
   .goods_tag{
     width: 100%;
-    @include setHeight(px2rem(60px));
+    @include setHeight(px2rem(70px));
     display: block;
     background: url(../img/goods_buy_tag.png) 0 0 no-repeat;
     background-size: 100%;
-    font-size: px2rem(22px);
+    font-size: px2rem(26px);
     color: #fff;
-    padding-left: px2rem(130px);
+    padding-left: px2rem(152px);
   }
   .goods_desc{
-    padding: px2rem(20px);
+    padding: px2rem(24px);
     .tags{
-      font-size: px2rem(14px);
+      font-size: px2rem(16px);
     }
     .group_count{
-      width: px2rem(180px);
+      width: px2rem(210px);
       text-align: center;
-      padding: px2rem(40px) 0;
+      padding: px2rem(46px) 0;
       border-left: 1px solid $linColor;
-      font-size: px2rem(20px);
+      font-size: px2rem(24px);
       .red{
         color: $red;
         display: block;
-        font-size: px2rem(36px);
+        font-size: px2rem(42px);
       }
     }
   }
   .has_more{
-    padding: px2rem(10px) px2rem(20px);
-    font-size: px2rem(22px);
+    padding: px2rem(12px) px2rem(24px);
+    font-size: px2rem(26px);
     border-bottom: 1px solid $linColor;
     em{
-      font-size: px2rem(19px);
+      font-size: px2rem(22px);
     }
+  }
+  .mask {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.8);
   }
   .prices_list{
     position: absolute;
-    width: px2rem(200px);
+    top: calc(50% - 0.9rem);
+    left: px2rem(96px);
+    width: calc(100% - 1.64rem);
     background: #fff;
     margin: auto;
+    @include borderRadius(5px);
+    color: #151515;
+    font-size: px2rem(28px);
+    .icon_close {
+      display: inline-block;
+      width: px2rem(58px);
+      height: px2rem(58px);
+      position: absolute;
+      top: px2rem(-29px);
+      right: px2rem(-29px);
+      background: url(./../img/icon_close.png) no-repeat;
+      background-size: 100%;
+      cursor: pointer;
+    }
+    h5 {
+      @include setHeight(px2rem(72px));
+      text-align: center;
+      font-size: px2rem(36px);
+      font-weight: 400;
+    }
+    ul {
+      li {
+        padding: 0 px2rem(79px);
+        @include setHeight(px2rem(112px));
+        border-top: px2rem(2px) solid #E5E5E5;
+        clear: both;
+        span {
+          display: inline-block;
+          em {
+            color: $red;
+          }
+        }
+      }
+    }
   }
   .group_people_list{
     li{
       border-bottom: 1px solid $linColor;
-      padding: px2rem(10px) px2rem(20px);
+      padding: px2rem(14px) px2rem(28px);
     }
     .people{
       line-height: 2;
     }
     .img{
-      width: px2rem(40px);
-      height: px2rem(40px);
+      width: px2rem(46px);
+      height: px2rem(46px);
       border-radius: 100%;
       background: $pin;
       display: inline-block;
       overflow: hidden;
     }
     .desc{
-      font-size: px2rem(20px);
-      width: px2rem(160px);
-      padding-right: px2rem(20px);
+      font-size: px2rem(24px);
+      width: px2rem(216px);
+      padding-right: px2rem(24px);
       text-align: center;
       i{
         color: $red;
+        display: inline-block;
+        margin-top: px2rem(-2px);
       }
       em{
         display: block;
@@ -74,24 +121,24 @@
       background: $red;
       color: #fff;
       border-radius: 4px;
-      font-size: px2rem(16px);
-      @include setHeight(px2rem(40px));
-      width: px2rem(90px);
+      font-size: px2rem(18px);
+      @include setHeight(px2rem(46px));
+      width: px2rem(105px);
       text-align: center;
       margin-top: px2rem(10px);
     }
   }
   .valuation_nav{
     width: 100%;
-    padding: px2rem(10px) px2rem(20px);
+    padding: px2rem(12px) px2rem(24px);
     white-space:nowrap;
     overflow: auto;
     li{
-      padding: px2rem(4px) px2rem(20px) px2rem(6px);
-      font-size: px2rem(16px);
+      padding: px2rem(4px) px2rem(24px) px2rem(7px);
+      font-size: px2rem(21px);
       background: #e8e8e8;
       display: inline-block;
-      margin-right: px2rem(20px);
+      margin-right: px2rem(24px);
       border-radius: 2px;
       &.active{
         background: $red;
@@ -100,10 +147,10 @@
     }
   }
   .valuation_list{
-    padding: px2rem(10px);
+    padding: px2rem(12px);
     border-bottom: 1px solid $linColor;
     .valuation_disc{
-      font-size: px2rem(22px);
+      font-size: px2rem(26px);
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -113,21 +160,21 @@
   }
   .valuation_img{
     ul{
-      padding: px2rem(10px);
+      padding: px2rem(12px);
       li{
-        width: px2rem(120px);
-        height: px2rem(120px);
+        width: px2rem(140px);
+        height: px2rem(140px);
         background: $red;
         display: inline-block;
-        margin: 0 px2rem(8px);
+        margin: 0 px2rem(9px);
       }
     }
   }
   .people{
     line-height: 2;
     .img{
-      width: px2rem(40px);
-      height: px2rem(40px);
+      width: px2rem(46px);
+      height: px2rem(46px);
       border-radius: 100%;
       background: $pin;
       display: inline-block;
@@ -135,7 +182,9 @@
     }
   }
 }
-
+.red {
+  color: $red;
+}
 .bdb{
   border-bottom: px2rem(6px) solid $linColor;
 }

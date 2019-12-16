@@ -1,0 +1,90 @@
+.myBook {
+  padding: 0 px2rem(25px);
+  .tab-book {
+    width: 100%;
+    font-size: px2rem(28px);
+    color: #323232;
+    @include setHeight(px2rem(80px));
+    li {
+      display: inline-block;
+      width: 20%;
+      margin-left: 6%;
+      text-align: center;
+      &.active {
+        color: #ff5001;
+        border-bottom: px2rem(4px) solid #FF4F01;
+      }
+      &:first-child {
+        margin-left: 0%;
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+  .goods_list {
+    padding: 0;
+    .goods_title {
+      color: #191919;
+      font-weight: 600;
+      font-size: px2rem(26px);
+    }
+    .booking-num {
+      font-size:  px2rem(22px);
+      margin-top: px2rem(40px);
+      .book-sign {
+        display: inline-block;
+        color: #fff;
+        padding: px2rem(6px) px2rem(4px);
+        background: linear-gradient(to right, #F99F17, #F85406);
+        @include borderRadius(2px);
+        &:after{
+          content: '∨';
+          font-size: px2rem(26px);
+          font-weight: 700;
+          color: #fff;
+          padding-left: px2rem(4px);
+        }
+      }
+    }
+    .book-price {
+      margin-top: px2rem(20px);
+      span:first-child  {
+        display: inline-block;
+        font-size: px2rem(36px);
+        color: $red;
+        float: left;
+      }
+      span:last-child{
+        font-size: px2rem(28px);
+        color:$red;
+        float: right;
+      }
+    }
+    .operation {
+      margin-top: px2rem(16px);
+      padding-top: px2rem(20px);
+      text-align: right;
+      border-top: px2rem(2px) solid #d7d7d7;
+      font-size: px2rem(24px);
+    }
+  }
+  
+.canel_btn {
+  display: inline-block;
+  padding: px2rem(14px) px2rem(18px);
+  background-color: #fff;
+  color: #666;
+  @include borderRadius(8px);
+  border: px2rem(2px) solid #d7d7d7;
+}
+.default_btn {
+  margin-left: px2rem(10px);
+  display: inline-block;
+  padding: px2rem(14px) px2rem(18px);
+  color: #fff;
+  background-color: $red;
+  @include borderRadius(8px);
+}
+}

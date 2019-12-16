@@ -1,0 +1,62 @@
+.booking{
+  .goods_list {
+    padding: 0 px2rem(16px);
+    .goods_img {
+      width: px2rem(218px);
+      height: px2rem(226px);
+    }
+   .booking-num {
+     font-size:  px2rem(22px);
+     margin-top: px2rem(40px);
+     .book-sign {
+       display: inline-block;
+       color: #fff;
+       padding: px2rem(6px) px2rem(4px);
+       background: linear-gradient(to right, #F99F17, #F85406);
+       @include borderRadius(2px);
+       &:after{
+         content: '∨';
+         font-size: px2rem(26px);
+         font-weight: 700;
+         color: #fff;
+         padding-left: px2rem(4px);
+       }
+     }
+     span:last-child {
+       float: right;
+       margin-top: px2rem(38px);
+       color: #C3C3C3;
+     }
+   }
+   .price-box {
+     font-size: px2rem(26px);
+     margin-top: px2rem(30px);
+     color: #A3A3A3;
+     .price {
+       display: inline-block;
+       width: px2rem(200px);
+       float: left;
+       span{
+         display: inline-block;
+       }
+     }
+     .booking-btn {
+       display: inline-block;
+       width: px2rem(160px);
+       background-color: #FE0000;
+       color: #fff;
+       text-align: center;
+       @include setHeight(px2rem(60px));
+       @include borderRadius(2px);
+       float: right;
+     }
+   }
+   .red {
+    color: #FD151E;
+  }
+  }
+}
+
+.bdb{
+  border-bottom: px2rem(6px) solid $linColor;
+}

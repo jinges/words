@@ -22,18 +22,8 @@
     <div class="group_prices bdb">
       <div class="grid has_more">
         <span class="cell">阶梯价格</span>
-        <em>查看全部></em>
+        <em id="showPrice">查看全部></em>
       </div>
-      <!-- <div class="prices_list">
-        <h5>阶梯价格</h5>
-        <ul>
-          <li><span>100人团购</span><span><em>50</em>元</span></li>
-          <li><span>100人团购</span><span><em>50</em>元</span></li>
-          <li><span>100人团购</span><span><em>50</em>元</span></li>
-          <li><span>100人团购</span><span><em>50</em>元</span></li>
-          <li><span>100人团购</span><span><em>50</em>元</span></li>
-        </ul>
-      </div> -->
     </div>
     <div class="group_people bdb">
       <div class="grid has_more">
@@ -124,8 +114,31 @@
           <span class="cell">商品详情</span>
         </div>
     </div>
-
+    <!-- 阶梯价格 -->
+    <div id="pricesList" class="mask">
+      <div  class="prices_list">
+        <i class="icon_close"></i>
+        <h5>阶梯价格</h5>
+        <ul>
+          <li><span>100人团购</span><span class="fr"><em>50</em>元</span></li>
+          <li><span>100人团购</span><span class="fr"><em>50</em>元</span></li>
+          <li><span>100人团购</span><span class="fr"><em>50</em>元</span></li>
+          <li><span>100人团购</span><span class="fr"><em>50</em>元</span></li>
+          <li><span>100人团购</span><span class="fr"><em>50</em>元</span></li>
+        </ul>
+      </div>
+    </div>
   </section>
 </article>
 
 <!--include "./components/layer/footer.html"-->
+<script>
+  $(function() {
+     $('#showPrice').click(function() {
+       $('#pricesList').show()
+     })
+     $('#pricesList .icon_close').click(function() {
+      $('#pricesList').hide()
+     })
+  })
+</script>

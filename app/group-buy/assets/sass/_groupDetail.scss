@@ -1,0 +1,268 @@
+.group-detail {
+  .cutPrice {
+    width: px2rem(202px);
+    height: px2rem(78px);
+    font-size: px2rem(24px);
+    padding: px2rem(5px);
+    margin-top: px2rem(40px);
+    border-top-right-radius: px2rem(39px);
+    border-bottom-right-radius:px2rem(39px);
+    color: #fff;
+    background-color: #FF6761;
+  }
+  .goods_img {
+    width: px2rem(380px);
+    height: px2rem(300px);
+  }
+  .group-info {
+    margin-top: px2rem(38px);
+    padding: 0 px2rem(20px);
+    .cell {
+      padding-top: px2rem(20px);
+    }
+    .price {
+      font-size: px2rem(36px);
+      color: #fd151e;
+      margin-right: px2rem(10px);
+    }
+    .member {
+      display: inline-block;
+      width: px2rem(36px);
+      height: px2rem(28px);
+      vertical-align: middle;
+      background: url(./../img/member.png) no-repeat center;
+      background-size: 100%;
+    }
+  }
+  .shortNum {
+    margin: px2rem(32px) px2rem(20px) px2rem(20px);
+    padding: px2rem(50px) px2rem(68px);
+    background-color: #FBF1EF;
+    color: #333333;
+    font-weight: 700;
+    @include borderRadius(4px);
+    .red {
+      font-size: px2rem(36px);
+      display: inline-block;
+      margin-top: px2rem(-6px);
+    }
+  }
+  .userBox {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-left: px2rem(16px);
+      position: relative;
+      .tz {
+        width: px2rem(53px);
+        height: px2rem(26px);
+        display: inline-block;
+        position: absolute;
+        top: px2rem(-10px);
+        left: px2rem(-10px);
+        background: url(./../img/tuanzhang.png) no-repeat;
+        background-size: 100%;
+      }
+      img {
+        width: px2rem(80px);
+        height: px2rem(80px);
+        @include borderRadius(50%)
+      }
+      .noHead {
+        display: inline-block;
+        @extend img;
+        border: px2rem(2px) dashed #B5B5B5;
+        line-height: px2rem(80px);
+        font-size: px2rem(40px);
+        color: #B5B5B5;
+        font-style: normal;
+        padding: 0 .26rem;
+      }
+    }
+  }
+  .countDown {
+    text-align: center;
+    margin-top: px2rem(20px);
+    font-size: px2rem(30px);
+    color: #000;
+    .hh,.mm,.s {
+      display: inline-block;
+      width: px2rem(34px);
+      height: px2rem(34px);
+      font-size: px2rem(24px);
+      background-color: #000000;
+      @include borderRadius(2px);
+      color: #fff;
+    }
+  }
+  .selfBtn,.otherBtn{
+    display: block;
+    width: calc(100% - px2rem(40px));
+    text-align: center;
+    color: #fff;
+    @include setHeight(px2rem(80px));
+    @include borderRadius(5px);
+    margin: px2rem(20px);
+  }
+  .selfBtn {
+    background-color: #FD0000;
+  }
+  .otherBtn{
+    background-color: #F9B359;
+  }
+  .goods_name {
+    color: #868686;
+    padding: px2rem(34px) px2rem(20px);
+    border-top:px2rem(14px) solid #EFEFEF;
+    border-bottom:px2rem(14px) solid #EFEFEF;
+    .title {
+      font-size: px2rem(30px);
+      margin-bottom: px2rem(45px);
+    }
+    .step {
+      font-size: px2rem(24px);
+      span {
+        margin: 0 px2rem(10px);
+        &:frist-child{
+         margin-left: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+         }
+      }
+    }
+  }
+  footer {
+    text-align: center;
+    margin-top: px2rem(30px);
+    .grayBtn {
+      display: inline-block;
+      width: px2rem(200px);
+      @include setHeight(px2rem(80px));
+      @include borderRadius(5px);
+      margin: 0 px2rem(40px);
+      text-align: center;
+      color: #AAAAAA;
+      border: px2rem(2px) solid #AAAAAA;
+    }
+  }
+  .mask {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    .share_arrow {
+      display: block;
+      width: px2rem(115px);
+      height: px2rem(213px);
+      background: url(./../img/icon-arrow.png) no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: calc(50% - 5.2rem);
+      right: px2rem(20px);
+    }
+    .confimBox {
+      display: none;
+      width: px2rem(600px);
+      height: px2rem(396px);
+      background-color: #fff;
+      padding: px2rem(40px) px2rem(100px);
+      @include borderRadius(5px);
+      position: absolute;
+      top: px2rem(260px);
+      top: calc(50% - 2rem);
+      left: px2rem(72px);
+      text-align: center;
+      color: #656565;
+      h4 {
+        font-size: px2rem(36px);
+        color: #212121;
+      }
+      p{
+        margin-top: px2rem(70px);
+        line-height: px2rem(50px);
+      }
+      .handle {
+        text-align: center;
+        margin-top: px2rem(30px);
+        .btn {
+          width: px2rem(155px);
+          @include setHeight(px2rem(50px));
+          @include borderRadius(px2rem(4px));
+          display: inline-block;
+          background: linear-gradient(to right,#F99F17,#F85406);
+          color: #fff;
+          &:last-child {
+            margin-left: px2rem(80px);
+          }
+        }
+      }
+    }
+    .shareSucceed {
+      display: none;
+      width: px2rem(600px);
+      height: px2rem(570px);
+      background-color: #fff;
+      padding: px2rem(40px) px2rem(30px);
+      @include borderRadius(5px);
+      position: absolute;
+      top: calc(50% - 2.8rem);
+      left: px2rem(72px);
+      text-align: center;
+      color: #656565;
+      h4 {
+        font-size: px2rem(36px);
+        color: #212121;
+        font-weight: 400;
+        .iconSucceed {
+          display: inline-block;
+          width: px2rem(40px);
+          height: px2rem(40px);
+          background: url(./../img/iconshare.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+      p {
+        font-size: px2rem(30px);
+        margin: px2rem(26px) 0;
+      }
+      .shareBtn {
+        display: inline-block;
+        text-align: center;
+        width: px2rem(495px);
+        @include setHeight(px2rem(70px));
+        @include borderRadius(5px);
+        color: #fff;
+        background: linear-gradient(to right,#F99F17,#F85406);
+      }
+      .share_tips{
+        display: block;
+        margin-top: px2rem(40px);
+        font-size: px2rem(30px);
+      }
+      .btngo {
+        display: inline-block;
+        text-align: center;
+        width: px2rem(495px);
+        @include setHeight(px2rem(70px));
+        @include borderRadius(5px);
+        background-color: #fff;
+        border: px2rem(2px) solid #f85206;
+        color: #f85206;
+      }
+    }
+  }
+}
+.emptyBtn {
+  display: inline-block;
+  width: px2rem(180px);
+  @include setHeight(px2rem(66px));
+  text-align: center;
+  background-color: #fff;
+  color: $red;
+  @include borderRadius(4px);
+  border: px2rem(2px) solid $red;
+}
