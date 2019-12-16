@@ -9,21 +9,57 @@
     color: #fff;
     padding-left: px2rem(152px);
   }
+  .goods_title{
+    line-height: px2rem(22px);
+  }
   .goods_desc{
     padding: px2rem(24px);
-    .tags{
-      font-size: px2rem(16px);
+    .new_price{
+      font-size: px2rem(48px);
+      padding-right: px2rem(22px);
+      &::after{
+        content: '起';
+        font-size: px2rem(20px);
+        position: absolute;
+        margin-top: px2rem(20px);
+      }
+    }
+    .tags, .old_price{
+      font-size: px2rem(20px);
+      vertical-align: -webkit-baseline-middle;
     }
     .group_count{
       width: px2rem(210px);
       text-align: center;
-      padding: px2rem(46px) 0;
+      padding: px2rem(20px) 0 0;
       border-left: 1px solid $linColor;
       font-size: px2rem(24px);
       .red{
         color: $red;
         display: block;
         font-size: px2rem(42px);
+      }
+      .by{
+        padding: px2rem(2px) px2rem(10px);
+        display: block;
+        width: px2rem(80px);
+        height: px2rem(40px);
+        border: 1px solid #4b4a4a;
+        margin: px2rem(4px) auto px2rem(14px);
+        border-radius: 4px;
+      }
+      .progressive{
+        background: rgba(249, 168, 168, 0.6);
+        height: px2rem(16px);
+        width: px2rem(140px);
+        border-radius: 10px;
+        margin: auto;
+        span{
+          background: $pin;
+          height: px2rem(16px);
+          display: block;
+          border-radius: 10px;
+        }
       }
     }
   }
@@ -33,6 +69,7 @@
     border-bottom: 1px solid $linColor;
     em{
       font-size: px2rem(22px);
+      vertical-align: baseline;
     }
   }
   .mask {
@@ -134,12 +171,16 @@
     white-space:nowrap;
     overflow: auto;
     li{
-      padding: px2rem(4px) px2rem(24px) px2rem(7px);
+      padding: 0 px2rem(16px);
       font-size: px2rem(21px);
       background: #e8e8e8;
       display: inline-block;
       margin-right: px2rem(24px);
       border-radius: 2px;
+      @include setHeight(px2rem(38px));
+      em{
+        vertical-align: baseline;
+      }
       &.active{
         background: $red;
         color: #fff;
