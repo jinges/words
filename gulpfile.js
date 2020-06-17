@@ -162,23 +162,21 @@ gulp.task('FC-config', function () {
     paths = notePath;
 })
 
-gulp.task('web', ['web-config', 'connect', 'watch'], function(){
-    opn('http://localhost:8080');
-})
+gulp.task('web', ['web-config', 'connect', 'watch'])
 
 gulp.task('ballot', ['ballot-config', 'connect', 'watch'], function(){
-    opn('http://localhost:8080');
+   
 })
 
 gulp.task('vr', ['vr-config', 'connect', 'watch'], function () {
-    opn('http://localhost:8080');
+    
 })
 
 gulp.task('game', ['game-config', 'connect', 'watch'], function () {
     opn('http://localhost:8088');
 })
 gulp.task('votes', ['votes-config', 'connect', 'watch'], function () {
-    opn('http://localhost:8088');
+    
 })
 
 gulp.task('group-buy', ['group-buy-config', 'connect', 'watch'], function () {
