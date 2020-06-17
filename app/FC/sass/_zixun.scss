@@ -1,0 +1,63 @@
+.zixun_icon{
+  .photo_icon{
+    width: px2rem(80px);
+    height: px2rem(80px);
+    position: fixed;
+    border-radius: 50%;
+    right: px2rem(20px);
+    bottom: px2rem(220px);
+    &::after{
+      content: '咨询';
+      font-size: px2rem(22px);
+      width: px2rem(80px);
+      text-align: center;
+      display: block;
+      color: #888;
+    }
+  }
+}
+.zixun{
+  padding:px2rem(20px);
+  header{
+    height: px2rem(180px);
+    padding: px2rem(40px)  px2rem(20px);
+    background: #9DC45F;
+    border-radius: px2rem(8px) px2rem(8px)  0 0;
+    .tip{
+      color: #fff;
+      text-shadow: 1px 1px 1px #949494;
+      padding-left: px2rem(20px);
+      span{
+        margin: auto;
+      }
+    }
+  }
+  .form{
+    padding: 0 px2rem(60px);
+    .form_item{
+      padding-top: px2rem(20px);
+      display: block;
+    }
+    label{
+      display: block;
+      padding: px2rem(6px) 0;
+    }
+    .sel,.input{
+      border: 1px solid #eee;
+      -webkit-appearance: menulist;
+      height: px2rem(64px);
+      padding: px2rem(10px);
+      width: 100%;
+      display: block;
+    }
+    .btn{
+      background: #9DC45F;
+      padding: px2rem(20px) px2rem(50px);
+      color: #fff;
+      border-radius: 4px;
+      margin: px2rem(10px) 0;
+      width: px2rem(160px);
+      display: block;
+    }
+  }
+}

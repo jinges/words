@@ -1,0 +1,67 @@
+.dialog{
+  .dialog_box{
+    width: 94%;
+    min-height: px2rem(300px);
+    background: #fff;
+    position: fixed;
+    z-index: 999999;
+    left: 3%;
+    top: 50%;
+    margin-top: -25%;
+    padding: px2rem(20px);
+    border-radius: px2rem(8px);
+    font-size: px2rem(28px);
+  }
+  h1{
+    padding:px2rem(10px) 0;
+    text-align: center;
+    font-size: px2rem(44px);
+  }
+  .contetn{
+    padding: px2rem(20px) 0;
+  }
+  .footer{
+    text-align: center;
+    padding: px2rem(10px) 0;
+    .btn{
+      padding: px2rem(14px) px2rem(24px);
+      color: #fff;
+      margin: 0 px2rem(8px);
+      border-radius: px2rem(8px);
+      &.agree_btn{
+        background: #FD482C;
+      }
+      &.cancel_btn{
+        background: #ccc;
+      }
+    }
+  }
+}
+
+.musk{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: .3);
+}
+.toast{
+  padding: px2rem(10px) px2rem(30px);
+  height: px2rem(60px);
+  line-height: px2rem(40px);
+  width: px2rem(200px);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  z-index: 9999999999;
+  border-radius: 4px;
+  color: #fff;
+  font-size: px2rem(26px);
+  background: rgba(74, 72, 72, 0.43);
+  text-align: center;
+  box-sizing: border-box;
+}

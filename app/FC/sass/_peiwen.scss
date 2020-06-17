@@ -1,0 +1,19 @@
+.peiwen{
+  .peiwen_icon{
+    width: px2rem(80px);
+    height: px2rem(80px);
+    position: fixed;
+    border-radius: 50%;
+    right: px2rem(20px);
+    bottom: px2rem(320px);
+  }
+}
+.peiwen_text{
+  width: 100%;
+  height: px2rem(240px);
+  border: px2rem(1px) solid #f75e52;
+  border-radius: px2rem(10px);
+  background-color: #fff9f9;
+  padding: px2rem(8px);
+  color: #646464;
+}

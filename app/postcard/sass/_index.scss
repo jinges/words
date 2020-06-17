@@ -1,0 +1,141 @@
+$h: px2rem(366px);
+.index{
+  background: #e8e8e8;
+}
+.index_header{
+  width: 100%;
+  height: $h;
+  .user{
+    width: 67%;
+    height: $h;
+    display: block;
+    padding: px2rem(36px) px2rem(120px) 0 px2rem(44px);
+    clip-path: polygon(0 0,75% 0,100% 100%,0 100%);
+    -webkit-clip-path: polygon(0 0,75% 0,100% 100%,0 100%);
+  }
+  .photo{
+    width: px2rem(130px);
+    height: px2rem(130px);
+    @include borderRadius(50%);
+    overflow: hidden;
+    margin-bottom: px2rem(50px);
+  }
+  .info{
+    color: #fff;
+    font-size: px2rem(21px);
+    p{
+      padding: px2rem(2px) 0;
+    }
+  }
+  .name{
+    @include setHeight(px2rem(50px), px2rem(46px));
+    font-size: px2rem(40px);
+  }
+  .disc{
+    width: px2rem(160px);
+  }
+  .phone{
+    font-size: px2rem(25px);
+    padding-right: px2rem(40px) !important;
+  }
+}
+.box{
+  padding: px2rem(44px) px2rem(44px) px2rem(126px);
+  margin-bottom: px2rem(12px);
+  font-size: px2rem(30px);
+  letter-spacing: 1px;
+  color: #2e2d2d;
+  background: #fff;
+  clear: both;
+  .tip{
+    @include setHeight(px2rem(44px));
+    margin-bottom: px2rem(35px);
+  }
+}
+.words{
+  @extend .box;
+  .title{
+    font-size: px2rem(30px);
+    letter-spacing: 1px;
+  }
+  .copy{
+    width: px2rem(93px);
+    @include setHeight(px2rem(44px));
+    border-radius: px2rem(22px);
+    border: 1px solid #919191;
+    font-size: px2rem(24px);
+    color: #919090;
+  }
+  .disc{
+    padding-top: px2rem(20px);
+    line-height: px2rem(48px);
+    font-size: px2rem(30px);
+    letter-spacing: 0;
+  }
+}
+
+.introduction{
+  @extend .box;
+  p{
+    line-height: px2rem(48px);
+    letter-spacing: 0;
+    padding-bottom: px2rem(70px);
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+  .qr{
+    width: px2rem(300px);
+    padding: 0 px2rem(52px);
+  }
+}
+
+.recommend {
+  float: left;
+  .imgs{
+    float: left;
+    height: auto;
+    overflow-x: auto;
+    &::-webkit-scrollbar {display:none}
+  }
+  ul{
+    overflow: auto;
+    float: left;
+  }
+  li{
+    width: calc((100% - 6px) / 2);
+    float: left;
+    margin-right: 6px;
+    overflow: hidden;
+    &:last-child(){
+      margin: 0;
+    }
+  }
+}
+.group{
+  li{
+    width: calc((100% - 14px) / 2);
+    height: calc((100% - 14px) / 2);
+    display: inline-block;
+    margin-bottom: 14px;
+    overflow: hidden;
+    &:nth-child(2n+1) {
+      margin-right: 14px;
+    }
+  }
+}
+
+.toast{
+  width: px2rem(140px);
+  @include setHeight(px2rem(50px));
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  z-index: 9999999999;
+  color: #fff;
+  background: rgba(74, 72, 72, 0.43);
+  text-align: center;
+}

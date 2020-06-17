@@ -1,0 +1,76 @@
+.find{
+  .head{
+    width: 100%;
+    height: px2rem(320px);
+    overflow: hidden;
+  }
+
+  .find_list{
+    padding-bottom: px2rem(160px);
+    .item{
+      padding: px2rem(46px) px2rem(30px) 0;
+      border-bottom: 1px solid #efefef;
+    }
+    .photo1{
+      width: px2rem(80px);
+      height: px2rem(80px);
+      overflow: hidden;
+    }
+    .box{
+      padding-left: px2rem(20px);
+    }
+    .header{
+      .name{
+        font-size: px2rem(31px);
+        color: #426ebf;
+        margin-left: px2rem(-20px);
+      }
+      .copy{
+        width: px2rem(92px);
+        height: px2rem(40px);
+        line-height: px2rem(40px);
+        border-radius: px2rem(13px);
+        text-align: center;
+        border: px2rem(2px) solid #426ebf;
+        font-size: px2rem(29px);
+        color: #426ebf;
+      }
+    }
+    .context{
+      p{
+        padding: px2rem(20px) 0 px2rem(50px);
+        font-size: px2rem(31px);
+        color: #252525;
+      }
+      .img{
+        width: px2rem(270px);
+        margin: px2rem(20px)  px2rem(20px)  px2rem(20px) 0;
+      }
+    }
+    .bottom{
+      padding: px2rem(20px) 0;
+      font-size: px2rem(26px);
+      color: #a8a8a8;
+    }
+  }
+  .nav{
+    height: px2rem(77px) ;
+    line-height: px2rem(77px);
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    li{
+      width: 33.333%;
+      text-align: center;
+      font-size: px2rem(25px);
+      color: #3a3a3a;
+      border-right:1px solid #efefef;
+      &:last-child{
+        border-width: 0;
+      }
+    }
+  }
+}

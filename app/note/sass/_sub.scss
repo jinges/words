@@ -1,0 +1,78 @@
+.sub{
+  padding: px2rem(60px) px2rem(30px) 0;
+  .tip1{
+    font-size: px2rem(35px);
+    color: #474747;
+    font-weight: normal;
+  }
+  .types {
+    padding: px2rem(24px) 0 px2rem(30px);
+    li{
+      width: 33.33%;
+      display: inline-block;
+      padding-top: px2rem(37px);
+      &:nth-child(3n) {
+        text-align: right;
+      }
+      &:nth-child(3n+2) {
+        text-align: center;
+      }
+    }
+    span{
+      font-size: px2rem(30px);
+      color: #3f3f3f;
+      &::before{
+        margin-right: px2rem(4px);
+      }
+    }
+  }
+  .mul_input{
+    padding: px2rem(24px) 0 px2rem(58px);
+    .t1{
+      height: px2rem(200px);
+      & + p{
+        font-size: px2rem(20px);
+        color: #bdbdbd;
+        padding: px2rem(24px) 0 0;
+      }
+    }
+    .t2{
+      height: px2rem(900px);
+    }
+  }
+  .files {
+    padding: px2rem(46px) 0 0;
+    text-align: justify;
+    li{
+      width: px2rem(200px);
+      height: px2rem(200px);
+      margin: 0 px2rem(20px) px2rem(20px) 0;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+    }
+  }
+  .u_tip{
+    font-size: px2rem(20px);
+    color: #bdbdbd;
+  }
+  .foot{
+    padding: px2rem(200px) 0 0;
+    .btn{
+      height: px2rem(76px);
+      line-height:  px2rem(76px);
+      background-color: #009cff;
+      letter-spacing: 2px;
+      color: #ffffff;
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: px2rem(41px);
+      & + p{
+        padding: px2rem(40px) 0;
+        font-size: px2rem(20px);
+        color: #009cff;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.footer_nav{
+  width: 100%;
+  height: px2rem(100px);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+  background: #fff;
+  .nav_icon{
+    padding-top: px2rem(58px);
+    font-size: px2rem(24px);
+    position: relative;
+    @for $i from 1 through 4 {
+      &.n#{$i} {
+        background: url(./../images/n#{$i}.png) 50% 20% no-repeat;
+        background-size: px2rem(42px) px2rem(42px);
+      }
+    }
+    &.active{
+      color: #FF342E;
+    }
+  }
+  .photo{
+    margin: px2rem(-20px) auto 0;
+  }
+}
+.photo{
+  width: px2rem(100px);
+  height: px2rem(100px);
+  display: block;
+  margin: auto;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  &.vip::after{
+    content: '';
+    width: px2rem(34px);
+    height: px2rem(34px);
+    background: url(./../images/vip.png) 50% 50% no-repeat;
+    background-size: 80%;
+    display: block;
+    position: absolute;
+    margin: px2rem(-30px) 0 0 px2rem(60px);
+  }
+}

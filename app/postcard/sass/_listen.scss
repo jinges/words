@@ -1,0 +1,95 @@
+.listen{
+  background: #f3f3f3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  .header{
+    height: px2rem(516px);
+    .bg{
+      width: 100%;
+      height: px2rem(400px);
+      overflow: hidden;
+    }
+    .box{
+      padding: 0 px2rem(20px);
+      position: absolute;
+      margin-top: px2rem(-80px);
+      width: 100%;
+      background: none;
+      .info{
+        padding: px2rem(26px) 0 px2rem(26px) px2rem(66px);
+        border-radius: px2rem(15px);
+        box-shadow: 1.721px 2.457px px2rem(20px) rgba(6,1,2,0.1);
+        background-color: #ffffff;
+        font-size: px2rem(30px);
+        line-height: px2rem(71px);
+        letter-spacing: 0px;
+        color: #2e2d2d;
+        .photo{
+          width: px2rem(121px);
+          height: px2rem(121px);
+          border-radius: 50%;
+          border: 1px solid #fff;
+          overflow: hidden;
+          box-shadow: 0 0 5px #d4d4d4;
+        }
+        .disc{
+          height: px2rem(121px);
+          padding: px2rem(24px) 0 px2rem(24px) px2rem(48px);
+          font-size: px2rem(32px);
+          line-height: px2rem(44px);
+          color: #423a3a;
+          .count{
+            font-size: px2rem(28px);
+          }
+        }
+      }
+    }
+    .num{
+      font-size: px2rem(30px);
+      color: #424242;
+      font-weight: bold;
+      position: absolute;
+      z-index: 9999;
+      top: px2rem(20px);
+      right: px2rem(20px);
+    }
+  }
+
+  .content{
+    padding: 0 px2rem(20px);
+    .body{
+      background-color: #ffffff;
+      font-size: px2rem(32px);
+      line-height: px2rem(56px);
+      color: #545454;
+      border-radius: px2rem(15px);
+      padding: px2rem(66px) px2rem(20px);
+    }
+    .date{
+      font-size: px2rem(40px);
+      color: #545454;
+      font-weight: 700;
+      text-align: center;
+    }
+    p{
+      margin-top: px2rem(55px);
+    }
+  }
+  .footer{
+    padding: px2rem(50px) px2rem(20px);
+    .btn{
+      width: 100%;
+      font-size: px2rem(40px);
+      text-align: center;
+      height: px2rem(76px);
+      line-height: px2rem(76px);
+      border-radius: px2rem(15px);
+      color: #fff;
+      background-color: #2fb8ff;
+    }
+  }
+}

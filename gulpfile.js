@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     concat = require('gulp-concat'),
     contentIncluder = require('gulp-content-includer'),
     minifyHtml = require('gulp-minify-html'),
@@ -13,6 +13,8 @@ var gulp = require('gulp'),
     del = require('del'),
     fs = require('fs'),
     opn = require('opn'),
+    babel = require('gulp-babel'),
+    replace = require('gulp-replace')
     assetRev = require('gulp-asset-rev');
 
 var paths = {};
@@ -36,24 +38,26 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('concat', function(){
-    gulp.src(paths.origin.html.source)
+    const v = (+new Date()).toString(32);
+    return gulp.src(paths.origin.html.source)
         .pipe(contentIncluder({
             includerReg:/<!\-\-include\s+"([^"]+)"\-\->/g,
             deepConcat: true,
             baseSrc: './'
         }))
+        .pipe(assetRev({ verStr: "?v="+v }))
         // .pipe(assetRev())
         // .pipe(rename('index.html'))
-        .pipe(minifyHtml())
+        // .pipe(minifyHtml())
         .pipe(gulp.dest(paths.origin.html.build))
         .pipe(livereload());
 });
 
 gulp.task('sass', function () {
-    console.log('run build sass files!')
     return gulp.src(paths.origin.styles.source)
         .pipe(sass())
-        .pipe(concat('app.css'))
+        .pipe(concat('style.css'))
+        // .pipe(replace('./../images', '/Public/Wsite/aasydivs/images'))
         .pipe(minifyCss())
         .pipe(rename({
           extname: '.min.css'
@@ -64,9 +68,12 @@ gulp.task('sass', function () {
 
 gulp.task('script', function () {
     return gulp.src(paths.origin.script.source)
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(concat('app.js'))
         .pipe(gulp.dest(paths.origin.script.build))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(rename({
           extname: '.min.js'
         }))
@@ -74,9 +81,15 @@ gulp.task('script', function () {
         .pipe(livereload());
 });
 
-gulp.task('transFiles', function(){
-    return gulp.src(paths.origin.files.source)
-        .pipe(gulp.dest(paths.origin.files.build))
+gulp.task('fonts', function(){
+    return gulp.src(paths.origin.fonts.source)
+        .pipe(gulp.dest(paths.origin.fonts.build))
+        .pipe(livereload());
+})
+
+gulp.task('static', function(){
+    return gulp.src(paths.origin.static.source)
+        .pipe(gulp.dest(paths.origin.static.build))
         .pipe(livereload());
 })
 
@@ -88,11 +101,11 @@ gulp.task('images', function() {
 });
 
 
-gulp.task('connect', ['concat', 'sass', 'script', 'images', 'transFiles'], function () {
+gulp.task('connect', ['concat', 'sass', 'script', 'images', 'fonts', 'static'], function () {
     connect.server({
         livereload:true,
         root: paths.tmp_root,
-        port: 8088
+        port: 8080
     });
 
     livereload.listen();
@@ -100,8 +113,8 @@ gulp.task('connect', ['concat', 'sass', 'script', 'images', 'transFiles'], funct
 
 gulp.task('watch', function () {
     gulp.watch(paths.origin.html.source, ['concat']);
+    gulp.watch(paths.origin.components.source, ['concat']);
     gulp.watch(paths.origin.styles.source, ['sass']);
-    gulp.watch(paths.origin.files.source, ['transFiles']);
     gulp.watch(paths.origin.script.source, ['script']);
     gulp.watch(paths.origin.images.source, ['images']);
     livereload.listen();
@@ -132,6 +145,22 @@ gulp.task('group-buy-config', function () {
     var votePath = require('./config/group-buy-path.js');
     paths = votePath;
 })
+gulp.task('education-config', function () {
+    var votePath = require('./config/education-path.js');
+    paths = votePath;
+})
+gulp.task('postcard-config', function () {
+    var votePath = require('./config/postcard-path.js');
+    paths = votePath;
+})
+gulp.task('note-config', function () {
+    var notePath = require('./config/note-path.js');
+    paths = notePath;
+})
+gulp.task('FC-config', function () {
+    var notePath = require('./config/fc-path.js');
+    paths = notePath;
+})
 
 gulp.task('web', ['web-config', 'connect', 'watch'], function(){
     opn('http://localhost:8080');
@@ -151,10 +180,23 @@ gulp.task('game', ['game-config', 'connect', 'watch'], function () {
 gulp.task('votes', ['votes-config', 'connect', 'watch'], function () {
     opn('http://localhost:8088');
 })
+
 gulp.task('group-buy', ['group-buy-config', 'connect', 'watch'], function () {
     
 })
+gulp.task('education', ['education-config', 'connect', 'watch'], function () {
+    
+})
+gulp.task('postcard', ['postcard-config', 'connect', 'watch'], function () {
+    
+})
+gulp.task('note', ['note-config', 'connect', 'watch'], function () {
+    
+})
+gulp.task('fc', ['FC-config', 'connect', 'watch'], function () {
+    
+})
 
-gulp.task('default', ['group-buy'], function(){
-    opn('http://localhost:8088');
+gulp.task('default', ['fc'], function(){
+    opn('http://localhost:8080');
 })

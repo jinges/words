@@ -1,0 +1,96 @@
+.more{
+  font-size: px2rem(24px);
+  color: #656565;
+  width: px2rem(70px);
+  @include setHeight(px2rem(22px));
+  background: url(../images/v4/arrow.png) right 0 no-repeat;
+  background-size: px2rem(20px);
+}
+.header{
+  @include setHeight(px2rem(47px));
+  font-size: px2rem(24px);
+  h2{
+    font-size: px2rem(36px);
+    color: #303030;
+    @include setHeight(px2rem(37px));
+  }
+  .change{
+    padding: 0 px2rem(14px) 0 0;
+    border-right: px2rem(4px) solid #d5d5d5;
+    margin-right: px2rem(24px);
+    @include setHeight(px2rem(23px));
+    color: #41413f;
+    .iconfont{
+      font-size: px2rem(30px);
+      padding-right: px2rem(8px);
+      color: #fd8304;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.price{
+  @include setHeight(px2rem(32px));
+  font-size: px2rem(32px);
+  color: #fd8304;
+  &::before{
+    content:"¥";
+    font-size: px2rem(22px);
+    padding-right: px2rem(4px);
+  }
+  &.than::after{
+    content:"起";
+    font-size: px2rem(24px);
+    padding-left: px2rem(4px);
+  }
+}
+
+.bp{
+  margin-bottom: px2rem(102px) 3px;
+}
+
+.load_more{
+  height: px2rem(83px);
+  font-size: px2rem(24px);
+  color: #999;
+  span{
+    width: px2rem(124px);
+    @include setHeight(px2rem(83px));
+    margin: auto;
+    &::before, &::after{
+      content: '';
+      width: px2rem(84px);
+      height: px2rem(20px);
+      display: block;
+      background: url(../images/v4/load_line.png) 0 50% no-repeat;
+      background-size: 100%;
+      position: absolute;
+      margin: px2rem(30px) 0 0 px2rem(-90px);
+    }
+    &::after{
+     transform: rotate(180deg);
+     margin: px2rem(-50px) 0 0 px2rem(124px);
+    }
+  }
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #000;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

@@ -1,0 +1,31 @@
+.nav_bottom {
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #fff;
+  z-index: 99999999999;
+  box-shadow: 0 -1px 5px #e7e7e7;
+  ul{
+    height: px2rem(100px);
+  }
+  li{
+    @extend .tc;
+    &.active a{
+      color: #f59a48;
+    }
+  }
+  a{
+    color: #959595;
+    
+  }
+  .iconfont{
+    font-size: px2rem(46px);
+    display: block;
+    width: 100%;
+  }
+  em{
+    font-size: px2rem(24px);
+    display: block;
+    width: 100%;
+  }
+}
