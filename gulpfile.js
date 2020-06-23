@@ -45,6 +45,7 @@ gulp.task('concat', function(){
             deepConcat: true,
             baseSrc: './'
         }))
+        // .pipe(replace('./assets/images', '/Public/Wsite/aasydivs/images'))
         .pipe(assetRev({ verStr: "?v="+v }))
         // .pipe(assetRev())
         // .pipe(rename('index.html'))

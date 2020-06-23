@@ -1,0 +1,129 @@
+.mycard{
+  padding: px2rem(42px);
+  background: #fff;
+  header{
+      color: #fff;
+      background: #289bf6;
+      border-radius: px2rem(10px);
+      overflow: hidden;
+      box-shadow: 9px 9px 10px #909090;
+      .dis{
+        padding: px2rem(25px) px2rem(40px);
+      }
+      .name{
+        font-size: px2rem(58px);
+        padding-bottom: px2rem(20px);
+      }
+      .v_icon{
+        width: px2rem(40px);
+      }
+      .xx{
+        font-size: px2rem(30px);
+        font-weight: 700;
+      }
+      .phone{
+        font-size: px2rem(26px);
+      }
+      .qr{
+        width: px2rem(178px);
+      }
+    
+  
+   
+  }
+   .btn{
+    background: #289bf6;
+    border-radius: px2rem(10px);
+    overflow: hidden;
+    box-shadow: 3px 3px 4px #909090;
+    width: 100%;
+    height: px2rem(80px);
+    line-height: px2rem(80px);
+    display: block;
+    margin-top: px2rem(60px);
+    text-align: center;
+    a{
+      color: #fff;
+      font-size: px2rem(36px);
+    }
+  }
+  .tip{
+    padding: px2rem(60px) 0 px2rem(80px);
+    font-size: px2rem(64px);
+  }
+  .watch{
+    .like{
+      min-width: px2rem(100px);
+      height: px2rem(80px);
+      text-align: center;
+      padding-top: px2rem(50px);
+      background: url(../images/icon-1.png) 50% 10% no-repeat;
+      background-size: px2rem(36px);
+      font-size: px2rem(20px);
+      em{
+        font-size: px2rem(22px);
+        vertical-align: baseline;
+      }
+      p{
+        font-size: px2rem(30px);
+      }
+    }
+  }
+  .service{
+    li{
+      width: 48%;
+      display: inline-block;
+      font-size: px2rem(32px);
+      height: px2rem(56px);
+      line-height: px2rem(56px);
+      position: relative;
+      &::after{
+        content: '';
+        width: px2rem(36px);
+        height: px2rem(36px);
+        display: block;
+        background: url(../images/icon-1.png) 50% 50% no-repeat;
+        background-size: 100%;
+        position: absolute;
+        margin-top: px2rem(-46px);
+        right: px2rem(20px);
+      }
+    }
+    em{
+      font-size: px2rem(38px);
+      vertical-align: baseline;
+    }
+  }
+  .info{
+    .disc{
+      font-size: px2rem(34px);
+    }
+    .wechat{
+      padding-top: px2rem(40px);
+      font-size: px2rem(40px);
+      p{
+        padding: px2rem(10px);
+      }
+    }
+  }
+  .choose{
+    font-size: px2rem(32px);
+    p{
+      padding-bottom: px2rem(40px);
+      line-height: px2rem(40px);
+    }
+  }
+  .swipe{
+    height: px2rem(700px);
+    overflow: hidden;
+    li{
+      border-bottom: px2rem(20px) solid #fff;
+      overflow: hidden;
+    }
+  }
+  .box-slogan{
+    font-size: px2rem(34px);
+    margin-top: px2rem(74px);
+    line-height: px2rem(42px);
+  }
+}

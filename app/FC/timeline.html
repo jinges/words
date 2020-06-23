@@ -1,0 +1,60 @@
+<!--include "./components/layer/header.html"-->
+<div class="timeline">
+  <header>
+    <div class="grid box">
+      <div class="cell">
+        <span>月份</span>
+        <h5 class="date">2020-06</h5>
+      </div>
+      <div class="cell">
+        <span>看我数</span>
+        <h5>4</h5>
+      </div>
+      <div class="cell">
+        <span >提醒设置</span>
+        <label for="swatch" class="swatchbox db">
+          <input type="checkbox" id="swatch">
+          <em class="db"></em>
+        </label>
+      </div>
+    </div>
+  </header>
+  <article>
+    <ul class="list">
+      <li class="item grid">
+        <span class="photo"><img src="./assets/images/default_photo.png" alt=""></span>
+        <div class="cell right">
+          <div class="content">
+            <span class="name">老郭子</span> 
+            <span>查看你的 文章（吃百副中药，还不如吃一盒倍立健！一点都不夸张，一粒倍立健=4斤柠檬+20斤稻米+1.5斤鲜花生+620毫升牛奶....能提高免疫力，增强骨密度）</span><span> 1次</span>
+          </div>
+          <div class="grid bottom">
+            <span class="tip">点击这里复制昵称</span>
+            <span class="cell tr" style="color: #646464;">2020-06-22</span>
+          </div>
+        </div>
+      </li>
+      </ul>
+  </article>
+</div>
+<script>
+  $(function(){
+    $('.list .item').on('click', function(){
+      var obj = {
+        content: "已复制昵称，请在微信通讯中粘贴搜索该好友",
+        style: 'width: 6rem'
+      };
+      toast(obj);
+    });
+    $('#swatch').on('change', function(e){
+      var flag = e.target.checked;
+      //设置操作
+      var obj = {
+        content: "操作成功!",
+        style: 'width: 2rem'
+      };
+      toast(obj);
+    });
+  })
+</script>
+<!--include "./components/layer/footer.html"-->

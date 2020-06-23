@@ -1,4 +1,6 @@
 <!--include "./components/layer/header.html"-->
+  <link rel="stylesheet" href="./static/swiper/css/swiper.min.css">
+  <script src="./static/swiper/js/swiper.min.js"></script>
 <section class="index hasNav">
   <header>
     <div class="search_box">
@@ -105,4 +107,17 @@
 
 <!--include "./components/nav_bar.html"-->
 <!--include "./components/zixun.html"-->
+<!--include "./components/ziliao.html"-->
+
+<script>
+
+var swiper = new Swiper('.banner', {
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    autoplay: {
+      delay: 3500,
+    },
+  });
+</script>
 <!--include "./components/layer/footer.html"-->

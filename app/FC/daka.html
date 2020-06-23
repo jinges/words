@@ -1,0 +1,51 @@
+<!--include "./components/layer/header.html"-->
+<div class="daka">
+  <header>
+    <img src="./assets/images/card.jpg" alt="">
+    <div class="date">
+      <h5 class="day">18</h5>
+      <span class="month"><em>06</em>月</span>
+    </div>
+  </header>
+  <div class="photo-box grid">
+    <span class="photo"><img src="./assets/images/default_photo.png" alt=""></span>
+    <div class="cell"></div>
+    <div>
+      <!-- autoplay="autoplay" -->
+      <audio id="music2" autoplay="autoplay"  loop="loop" src="./assets/images/5e4d2056131e3.mp3">你的浏览器不支持audio标签。</audio>
+      <span id="music_btn2" class="cover_audio db playing"></span></div>
+  </div>
+
+  <div class="tip">
+    <h2>【坚持】打卡第<span style="color: rgb(255, 52, 46);"> 2 </span>天</h2>
+    <p>早睡品质战胜全国<span style="color: rgb(255, 52, 46);"> 77.24% </span>的人</p>
+    
+  </div>
+  <div class="content">
+    <p>
+      
+      很多人都羡慕那些一夜爆红的成功人士。其实，这个世界上从来没有一蹴而就的成功。如果没有踏实的努力，没有点滴的积累，再好的运气降落到你头上时，你也没有接住它的实力。 早安！					</p>
+  </div>
+  <div class="daka_bottom">
+    <a href="card.html" class="btn">打卡记录</a>
+  </div>
+</div>
+<script>
+  $(function(){
+    var music2 = $('#music2')[0];
+    var playing = true;
+    $("#music_btn2").on('click', function(){
+      var $this = $(this);
+      if(!playing) {
+        music2.play();
+        $this.addClass('playing');
+      } else {
+        music2.pause();
+        $this.removeClass('playing');
+      }
+      playing = !playing;
+    });
+  })
+</script>
+<!--include "./components/layer/footer.html"-->
+

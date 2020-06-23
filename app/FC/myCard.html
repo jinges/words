@@ -1,0 +1,153 @@
+<!--include "./components/layer/header.html"-->
+  <link rel="stylesheet" href="./static/swiper/css/swiper.min.css">
+  <script src="./static/swiper/js/swiper.min.js"></script>
+<section class="mycard">
+  <header>
+    <img src="./assets/images/132.jpeg" />
+    <div class="grid dis">
+      <div class="cell">
+        <h1 class="name">大明冯 <img class="v_icon" src="./assets/images/V.png" /></h1>
+        <div>
+          <span class="xx">未设置</span>
+          <p class="phone">18665877630</p>
+        </div>
+      </div>
+      <a class="qr" href="personal.html">
+        <img src="./assets/images/upCode.gif" alt="">
+      </a>
+    </div>
+  </header>
+
+  <span class="btn">
+    <a href="personal.html">编辑个人资料</a>
+  </span>
+
+  <article>
+    <h1 class="tip">谁浏览过</h1>
+    <div class="grid watch">
+      <ul class="cell">
+        <li></li>
+      </ul>
+      <span class="like db">
+         靠谱<em>0</em>
+      </span>
+    </div>
+    <p>0人浏览</p>
+  </article>
+
+  <article>
+    <h1 class="tip">品质服务</h1>
+    <ul class="service">
+      <li>
+        诚信专业（<em>0</em>）
+      </li>
+      <li>
+        服务高效（<em>0</em>）
+      </li>
+      <li>
+        乐于分享（<em>0</em>）
+      </li>
+      <li>
+        热爱生活（<em>0</em>）
+      </li>
+      <li>
+        品质优秀（<em>0</em>）
+      </li>
+      <li>
+        超级好人（<em>0</em>）
+      </li>
+      <li>
+        风趣幽默（<em>0</em>）
+      </li>
+      <li>
+        责任心强（<em>0</em>）
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h1 class="tip">个人简介</h1>
+    <div class="info">
+      <p class="disc">您好，我是您身边的家庭健康顾问，掌握有专业的生活健康知识包括营养保健知识美容护肤知识，养身调理知识是您身边的个人护理、家庭护理专业顾问。如果您在这些方面需要帮助，欢迎联系我。</p>
+      <div class="wechat">
+        <p>深圳</p>
+        <p><span>大明冯</span> <span>18665877630</span></p>
+      </div>
+    </div>
+    <span class="btn">
+      <a href="tel:18665877630">拨打电话</a>
+    </span>
+  </article>
+
+
+  <article>
+    <h1 class="tip">我的选择</h1>
+    <div class="choose">
+      <p>安利从平凡中起步，走向传奇的伟大公司</p>
+      <p> 安利是国际知名品牌，产品品质有保障的公司</p>
+      <p> 我坚信我的选择并受益我的选择！</p>
+      <p> 20世纪50年代：创始人因友谊、信任走在一起，小小肥皂开启事业</p>
+      <p> 20世纪60年代：独特的事业模式，让更多人可以加入并分享胜利成果</p>
+      <p> 20世纪70年代：“分享、关爱、机会”理念下业务快速在全球增长</p>
+      <p> 20世纪80年代：公司年零售额首次超过10亿美元，雅姿也在那个年代诞生</p>
+      <p> 20世纪90年代：新价值与新动力，电子商务模式，为营销人员带来持续支持</p>
+      <p> 2000年以来： 安利业务遍及全球80多个国家和地区，为超过300万的人们带来创业机会</p>
+      <p> 2010年至今： 秉承“为您生活添色彩”的愿景，安利将继续与全世界热爱生活，乐于改变的人们同行，以诚信的理念，稳固的伙伴关系、卓越的服务品质，与您一起迎接未来，同享丰盛。</p>
+      <p>好公司，好品牌，值得终身相伴！</p>
+    </div>
+  </article>
+
+
+  <article>
+    <h1 class="tip">风采展示</h1>
+    <div class="swipe swiper-container">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide"><img src="./assets/images/1.jpg"></li>
+        <li class="swiper-slide"><img src="./assets/images/2.jpg"></li>
+        <li class="swiper-slide"><img src="./assets/images/3.jpg"></li>
+      </ul>
+    </div>
+    <div class="box-slogan">安利事业<br>为您生活添色彩</div>
+  </article>
+</section>
+<script>
+  $(function(){
+    $('.watch .like').on('click', function(){
+      var $this = $(this);
+      var index = $this.index();
+      var em = $this.find('em');
+      var count = em.text();
+      ++count;
+      em.text(count);
+      var obj = {
+        content: "点赞成功!",
+        style: 'width: 2rem'
+      };
+      toast(obj);
+    });
+
+    $('.service li').on('click', function(){
+      var $this = $(this);
+      var index = $this.index();
+      var em = $this.find('em');
+      var count = em.text();
+      ++count;
+      em.text(count);
+      var obj = {
+        content: "添加成功!",
+        style: 'width: 2rem'
+      };
+      toast(obj);
+    });
+
+    var swiper = new Swiper('.swipe', {
+      direction : 'vertical',
+      slidesPerView : 2,
+      loop : true,
+      autoplay: {
+        delay: 3500,
+      },
+    });
+  })
+</script>
+<!--include "./components/layer/footer.html"-->

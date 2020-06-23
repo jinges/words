@@ -1,0 +1,16 @@
+.consult{
+  header{
+    background: #FF342E;
+    padding: px2rem(40px) 0;
+    .photo{
+      width: px2rem(140px);
+      height: px2rem(140px);
+    }
+    p{
+      text-align: center;
+      font-size: px2rem(36px);
+      padding: px2rem(4px) 0;
+      color: #fff;
+    }
+  }
+}

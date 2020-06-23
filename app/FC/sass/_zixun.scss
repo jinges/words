@@ -32,32 +32,32 @@
       }
     }
   }
-  .form{
-    padding: 0 px2rem(60px);
-    .form_item{
-      padding-top: px2rem(20px);
-      display: block;
-    }
-    label{
-      display: block;
-      padding: px2rem(6px) 0;
-    }
-    .sel,.input{
-      border: 1px solid #eee;
-      -webkit-appearance: menulist;
-      height: px2rem(64px);
-      padding: px2rem(10px);
-      width: 100%;
-      display: block;
-    }
-    .btn{
-      background: #9DC45F;
-      padding: px2rem(20px) px2rem(50px);
-      color: #fff;
-      border-radius: 4px;
-      margin: px2rem(10px) 0;
-      width: px2rem(160px);
-      display: block;
-    }
+}
+.form{
+  padding: 0 px2rem(60px);
+  .form_item{
+    padding-top: px2rem(20px);
+    display: block;
+  }
+  label{
+    display: block;
+    padding: px2rem(6px) 0;
+  }
+  .sel,.input{
+    border: 1px solid #eee;
+    -webkit-appearance: menulist;
+    height: px2rem(64px);
+    padding: px2rem(10px);
+    width: 100%;
+    display: block;
+  }
+  .btn{
+    background: #9DC45F;
+    padding: px2rem(20px) px2rem(50px);
+    color: #fff;
+    border-radius: 4px;
+    margin: px2rem(10px) 0;
+    width: px2rem(160px);
+    display: block;
   }
 }

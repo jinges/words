@@ -1,0 +1,83 @@
+.daka{
+  background: #fff;
+  position: fixed;
+  height: 100%;
+  .date{
+    width: px2rem(100px);
+    position: absolute;
+    top: 0;
+    right: px2rem(40px);
+    padding: px2rem(10px);
+    color: #fff;
+    text-align: center;
+    display: block;
+    background: rgba($color: #000000, $alpha: .2);
+    .day{
+      font-size: px2rem(60px);
+      display: block;
+    }
+    .month{
+      font-size: px2rem(30px);
+      display: block;
+      em{
+        font-size: px2rem(38px);
+        vertical-align: bottom;
+      }
+    }
+  }
+  .photo-box{
+    padding: 0 px2rem(36px);
+    margin-top: px2rem(-82px);
+    align-items: flex-end;
+    .photo{
+      width: px2rem(164px);
+      height: px2rem(164px);
+      border-width: 0;
+    }
+    .cover_audio{
+      width: px2rem(60px);
+      height: px2rem(60px);
+      background: url(../images/music_pause_btn.png) 50% 50% no-repeat;
+      background-size: 100%;
+      &.playing{
+        background: url(../images/music_play_btn.gif) 50% 50% no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  .tip{
+    padding: px2rem(60px) px2rem(36px)  px2rem(16px);
+    font-size: px2rem(38px);
+    &::after{
+      content: '';
+      height: 2px;
+      width: 100%;
+      display: block;
+      margin-top: px2rem(30px);
+      border-bottom: px2rem(3px) dashed #eee;
+    }
+    h2{
+      margin-left: px2rem(-20px);
+      font-size: px2rem(38px);
+    }
+  }
+  .content{
+    padding: px2rem(26px) px2rem(36px);
+    font-size: px2rem(34px);
+  }
+  
+}
+
+.daka_bottom{
+  padding: px2rem(50px);
+  text-align: center;
+  .btn{
+    background: #f22d11;
+    text-align: center;
+    color: white;
+    padding: px2rem(15px) px2rem(22px);
+    font-size: px2rem(30px);
+    border-radius: px2rem(10px);
+    border: 1px solid #f22d11;
+  }
+}

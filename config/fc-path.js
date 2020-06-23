@@ -12,7 +12,7 @@ var pcpaths = {
         },
         images: {
             source: [
-                root + '/images/*.*',
+                root + '/images/**/*.*',
             ],
             build: tmp_root + '/assets/images'
         },

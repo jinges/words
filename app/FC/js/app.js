@@ -5,16 +5,43 @@ $(function(){
     $(".all_nav").show().find('ul').html(lis);
   }).on('click', ".nav_close_btn", function(){
     $(".all_nav").hide()
+  }).on('click', '.dialog .mask', function(){
+    $(this).parent().remove();
+  }).on('click', '.footer_nav #join', function(){
+    var temp = `<article class="dialog">
+          <div class="mask"></div>
+          <div class="dialog_box join">
+            <img src="./assets/images/wxgroup_gh_f2161b62620c.jpg"/>
+          </div>
+        </article>`;
+    $('body').append(temp);
+  }).on('click', '#buy_vip_btn', function(){
+    $(".vip_price_box").show();
+  }).on('click', '.vip_price_box .close_box, .vip_price_box .mask', function(){
+    $(this).parents('.vip_price_box').hide();
+  }).on('click', '.price_item', function(){
+    var $this = $(this);
+    var price = $this.find('.price').text();
+    $this.addClass('selected').siblings().removeClass('selected');
+    $('.total_price').find('span').text(price);
   });
 
-  var swiper = new Swiper('.banner', {
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    autoplay: {
-      delay: 3500,
-    },
-  });
+  $('#prve-img').click(function(){
+    var activeImg = $('.content-box.active');
+    if(activeImg.prev().length){
+      activeImg.removeClass('active').prev().addClass('active');
+    } else {
+      activeImg.removeClass('active').parent().children().last().addClass('active');
+    }
+  })
+  $('#next-img').click(function(){
+    var activeImg = $('.content-box.active');
+    if(activeImg.next().length){
+      activeImg.removeClass('active').next().addClass('active');
+    } else {
+      activeImg.removeClass('active').parent().children().first().addClass('active');
+    }
+  })
 
   //温馨提示
   var obj = {
@@ -49,14 +76,16 @@ function Dialog(obj){
   if(!obj.content.length) {
     return false;
   };
-  if(obj.btns.length > 1){
-    obj.cancel_btn = obj.btns[0];
-    obj.agree_btn = obj.btns[1];
-  } else if(obj.btns.length == 1){
-    obj.agree_btn = obj.btns[0];
-  };
+  if(obj.btns) {
+    if(obj.btns.length > 1){
+      obj.cancel_btn = obj.btns[0];
+      obj.agree_btn = obj.btns[1];
+    } else if(obj.btns.length == 1){
+      obj.agree_btn = obj.btns[0];
+    };
+  }
 
-  if(!obj.title.length) {
+  if(obj.title && !obj.title.length) {
     obj.title = '温馨提示';
   }
 
@@ -71,7 +100,7 @@ Dialog.prototype = {
     var $this = this;
     var temp = `
         <article class="dialog" id="${$this.id}">
-        <div class="musk"></div>
+        <div class="mask"></div>
         <div class="dialog_box">
           <h1>${$this.title}</h1>
           <div class="contetn">
@@ -114,4 +143,12 @@ Dialog.prototype = {
     $('body').find('#'+ this.id).remove();
     delete this;
   }
+}
+
+function toast(obj){
+  var temp = `<span class="toast" style="${obj.style}">${obj.content}</span>`;
+    $('body').append(temp);
+    setTimeout(() => {
+      $('body').find('.toast').remove();
+    }, 1000);
 }
