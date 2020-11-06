@@ -1,4 +1,4 @@
-var elms = ['timer', 'duration','forward', 'progress_box', 'progress', 'progress_state', 'playBtn', 'prevBtn', 'nextBtn', 'playlistBtn','list','rateBtn', 'mask'];
+var elms = ['timer', 'duration','forward', 'progress_box', 'progress', 'progress_state', 'playBtn', 'prevBtn', 'nextBtn', 'playlistBtn','list','rateBtn', 'closeList'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -21,6 +21,17 @@ var Player = function(opt) {
   });
 };
 
+function changePlay(index){
+  var ul = document.querySelector('.sources ul');
+  ul.childNodes.forEach(function(li,k){
+    if(k == index) {
+      li.classList.add('active');
+    } else {
+      li.classList.remove('active')
+    }
+  })
+}
+
 Player.prototype = {
   play: function(index){
     var self = this;
@@ -39,6 +50,7 @@ Player.prototype = {
           duration.innerHTML = self.formatTime(Math.round(sound.duration()));
           requestAnimationFrame(self.step.bind(self));
           progress_state.style.display = 'block';
+          changePlay(index);
         },
         onload: function(){
           //加载中
@@ -230,24 +242,24 @@ progress_box.addEventListener('click', function(e) {
 playlistBtn.addEventListener('click', function(e) {
   player.togglePlaylist();
 });
-mask.addEventListener('click', function(e) {
+closeList.addEventListener('click', function(e) {
   player.togglePlaylist();
 });
 
 var player = new Player({
   src:[
   {
-    title: 'Rave Digger',
+    title: '做个会表达的女人做个会表达',
     file: 'rave_digger',
     howl: null
   },
   {
-    title: '80s Vibe',
+    title: '证监会回应蚂蚁集团暂缓上市',
     file: '80s_vibe',
     howl: null
   },
   {
-    title: 'Running Out',
+    title: '证监会回应蚂蚁集团暂缓上市：是对投资者和市场负责人。',
     file: 'running_out',
     howl: null
   }
