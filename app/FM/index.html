@@ -1,7 +1,7 @@
 <!--include "./components/layer/header.html"-->
   <link rel="stylesheet" href="./static/swiper/css/swiper.min.css">
 <article class="index hasNav">
-  <div class="banner pr">
+  <div class="banner swiper-container pr">
     <ul  class="swiper-wrapper">
       <li class="swiper-slide"><a href="javascript:;"><img src="./images/banner1.png" alt=""></a></li>
       <li class="swiper-slide"><a href="javascript:;"><img src="./images/banner1.png" alt=""></a></li>
@@ -196,10 +196,14 @@
   <script src="./static/swiper/js/swiper.min.js"></script>
   <script>
     window.onload= function(){
-      var swiper = new Swiper('.banner', {
-        pagination: {
-          el: '.swiper-pagination',
-        },
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+      spaceBetween: 6,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       });
     }
   </script>

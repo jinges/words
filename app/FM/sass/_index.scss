@@ -3,9 +3,18 @@
   .banner{
     // padding: px2rem(20px) px2rem(30px);
     overflow: hidden;
-    .swiper-slide{
-      border-radius: px2rem(10px);
+    background: #fff;
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      width: 92%;
+      max-height: px2rem(416px);
       overflow: hidden;
+      padding: px2rem(30px) 0 0;
+      img{
+        border-radius: px2rem(16px);
+      }
     }
     .point{
       margin-top: px2rem(-40px);
@@ -42,7 +51,7 @@
       width: px2rem(162px);
       height: px2rem(162px);
       border-radius: px2rem(12px);
-      margin-right: px2rem(20px);
+      margin-right: px2rem(30px);
       overflow: hidden;
       position: relative;
       @extend .iconfont;

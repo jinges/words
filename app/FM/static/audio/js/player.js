@@ -203,28 +203,6 @@ Player.prototype = {
   }
 };
 
-var player = new Player({
-  src:[
-  {
-    title: 'Rave Digger',
-    file: 'rave_digger',
-    howl: null
-  },
-  {
-    title: '80s Vibe',
-    file: '80s_vibe',
-    howl: null
-  },
-  {
-    title: 'Running Out',
-    file: 'running_out',
-    howl: null
-  }
-],
-autoplay: true,});
-
-player.play();
-
 playBtn.addEventListener('click', function() {
   if(player.state){
     player.pause();
@@ -255,3 +233,25 @@ playlistBtn.addEventListener('click', function(e) {
 mask.addEventListener('click', function(e) {
   player.togglePlaylist();
 });
+
+var player = new Player({
+  src:[
+  {
+    title: 'Rave Digger',
+    file: 'rave_digger',
+    howl: null
+  },
+  {
+    title: '80s Vibe',
+    file: '80s_vibe',
+    howl: null
+  },
+  {
+    title: 'Running Out',
+    file: 'running_out',
+    howl: null
+  }
+],
+autoplay: true,});
+
+player.play();

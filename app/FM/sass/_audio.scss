@@ -1,34 +1,34 @@
 .audio{
   .audio_head {
-    height: px2rem(72px);
     background: #fff;
   
     .progress_box {
       width: 100%;
       height: px2rem(4px);
-      background: #e3e3e3;
+      background: #eaeaea;
       display: block;
       position: relative;
     }
     .progress_bar {
       height: px2rem(4px);
-      background: #f7bd0c;
+      background: #ff6533;
       display: block;
       position: absolute;
       border-radius: px2rem(6px);
     }
     .progress_btn{
-      width: px2rem(20px);
-      height: px2rem(20px);
+      width: px2rem(16px);
+      height: px2rem(16px);
       display: block;
-      background: #f7bd0c;
+      background: #ff6533;
       border-radius: 50%;
       position: absolute;
-      margin-top: px2rem(-8px);
+      margin-top: px2rem(-5px);
     }
   
     .progress_state {
-      padding: px2rem(20px);
+      display: none;
+      padding: px2rem(16px);
       color: #8b8b8b;
       font-size: px2rem(24px);
     }
@@ -49,76 +49,62 @@
   }
   
   .audio_body{
-    padding: px2rem(50px);
-    .list {
-      width: px2rem(70px);
-      height: px2rem(100px);
-      background: url(../static/audio/image/5.png) 0 center no-repeat;
-      background-size: 100%;
-    }
+    padding: px2rem(50px) px2rem(60px);
+    height: px2rem(188px);
     .player{
-      padding: 0 px2rem(40px);
-      .playBtn {
-        font-size: px2rem(50px);
-        height: px2rem(100px);
+      padding: 0 px2rem(60px);
+      justify-content: space-between;
+      .switch {
+        width: px2rem(88px);
+        height: px2rem(88px);
+        line-height: px2rem(88px);
+        font-size: px2rem(38px);
+        overflow: hidden;
         text-align: center;
-        em{
-          @extend .iconfont;
-          display: block;
-          width: px2rem(100px);
-          height: px2rem(100px);
-          line-height: px2rem(100px);
-          text-align: center;
-          background: #f7bd0c;
-          border-radius: 50%;
-          margin: auto;
-        }
+        color: #fff;
+        @extend .iconfont;
+        border-radius: 50%;
+        display: block;
+        background: #cacaca;
+        display: block;
         &.play {
-          em{
-            @extend .icon-bofang; 
+          @extend .icon-bofang; 
             &::before{
               margin-left: px2rem(10px);
             }
-          }
         }
         &.pause {
-          em{
           @extend .icon-zanting; 
           &::before{
             margin-left: 0;
           }
-          }
-        }
-      }
-      .switch {
-        width: px2rem(100px);
-        height: px2rem(100px);
-        font-size: px2rem(60px);
-        padding: px2rem(20px);
-        em{
-          @extend .iconfont;
-          @extend .icon-xiayishou; 
-          display: block;
         }
         &.none {
-          color: #e3e3e3;
+          background: #ebebeb;
+        }
+        &.next{
+          @extend .icon-xiayishou; 
         }
         &.prev {
+          @extend .icon-xiayishou; 
           transform: rotate(180deg);
         }
       }
       
     }
     .speed {
-      font-size: px2rem(32px);
+      font-size: px2rem(26px);
       text-align: center;
-      width: px2rem(80px);
-      height: px2rem(60px);
-      line-height: px2rem(54px);
-      border: px2rem(3px) solid #000;
-      border-radius: px2rem(14px);
-      margin-top: px2rem(20px);
+      width: px2rem(70px);
+      height: px2rem(70px);
+      line-height: px2rem(70px);
+      border-radius: 50%;
+      margin-top: px2rem(5px);
       display: block;
+      box-shadow: 0 0 10px #e0e0e0;
+    }
+    .list {
+      @extend .speed;
     }
   }
   
