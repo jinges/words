@@ -22,7 +22,7 @@
       height: px2rem(66px);
       width: px2rem(380px);
       padding-left: px2rem(66px);
-      background: #e7e7e7 url(../images/v4/search.png) px2rem(20px) 50% no-repeat;
+      background: #e7e7e7 url(../images/search.png) px2rem(20px) 50% no-repeat;
       background-size: px2rem(40px);
       @include borderRadius(px2rem(40px));
       width: 100%;
@@ -32,7 +32,7 @@
     width: px2rem(60px);
     height: px2rem(50px);
     display: block;
-    background: url(../images/v4/mail.png) 0 0 no-repeat;
+    background: url(../images/mail.png) 0 0 no-repeat;
     background-size: 100%;
     &.has::after{
       content: '';
@@ -52,7 +52,7 @@
   font-weight: 600;
   ul{
     padding: px2rem(20px) px2rem(0px) px2rem(20px) px2rem(120px);
-    background: url(../images/v4/vip.png) px2rem(6px) px2rem(10px) no-repeat;
+    background: url(../images/vip.png) px2rem(6px) px2rem(10px) no-repeat;
     background-size: px2rem(80px);
     li{
       padding: 0 px2rem(23px);
@@ -60,7 +60,7 @@
   }
   .cate{
     padding: px2rem(20px) 0 0 px2rem(64px);
-    background: url(../images/v4/cate_icon.png) px2rem(10px) no-repeat;
+    background: url(../images/cate_icon.png) px2rem(10px) no-repeat;
     background-size: px2rem(50px);
   }
 }
@@ -110,7 +110,7 @@
       display: block;
       position: absolute;
       margin: px2rem(-49px) 0 0 px2rem(160px);
-      background: url(../images/v4/bookmark.png) 0 0 no-repeat;
+      background: url(../images/bookmark.png) 0 0 no-repeat;
       background-size: px2rem(120px) px2rem(60px);
     }
   }

@@ -1,0 +1,103 @@
+.timeline{
+  header{
+    height: px2rem(256px);
+    background: linear-gradient(to top right, #fb9100 0%, #f9a012 25%, #f8b224 100%);
+  }
+  .box{
+    width: 90%;
+    height: px2rem(234px);
+    position: absolute;
+    background: #fff;
+    margin: px2rem(156px) 5% 0;
+    box-shadow: 0 px2rem(4px) px2rem(30px) #fb9100;
+    border-radius: px2rem(20px);
+    padding: px2rem(50px) px2rem(40px);
+    text-align: center;
+    span{
+      font-size: px2rem(32px);
+      display: block;
+      height: px2rem(60px);
+    }
+    h5{
+      font-size: px2rem(50px);
+      &.date{
+        color: #f00;
+      }
+      &.count{
+        color: rgb(100, 100, 100);
+      }
+    }
+  }
+  .swatchbox{
+    width: px2rem(148px);
+    height: px2rem(60px);
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    input + em{
+      width: px2rem(148px);
+      height: px2rem(60px);
+      position: absolute;
+      background: #fff;
+      border:px2rem(1px) solid #e7e7e7;
+      border-radius: px2rem(100px);
+      top: 0;
+      transition-duration: .3s;
+      &::after{
+        content: '';
+          width: px2rem(52px);
+          height: px2rem(52px);
+          display: block;
+          border-radius: 50%;
+          background: #fff;
+          top: px2rem(2.6px);
+          position: absolute;
+          box-shadow: 0 0 4px #d0cece;
+          transform: translateX(px2rem(3px));
+          transition: ease-out .4s;
+      }
+    }
+    input:checked + em{
+      background: #4bdb62;
+      &::after{
+        transform: translateX(px2rem(88px));
+        transition: ease-out .4;
+      }
+    }
+  }
+  .list{
+    margin: px2rem(170px) 0;
+    li{
+      padding: px2rem(22px);
+      background: #fff;
+      height: px2rem(366px);
+    }
+    .photo{
+      width: px2rem(116px);
+      height: px2rem(116px);
+    }
+    .right{
+      padding-left: px2rem(20px);
+    }
+    .content{
+      font-size: px2rem(31px);
+      height: px2rem(270px);
+      line-height: 1.4;
+    }
+    .name{
+      color: #d33c09;
+    }
+    .bottom{
+      font-size: px2rem(28px);
+      height: px2rem(52px);
+      line-height: px2rem(52px);
+    }
+    .tip{
+      background: #fbf3cc;
+      color: #d33c09;
+      padding: 0 px2rem(20px);
+      border-radius: px2rem(30px);
+    }
+  }
+
+}

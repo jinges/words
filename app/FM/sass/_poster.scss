@@ -1,0 +1,42 @@
+.poster {
+  .nav_poster {
+    width: 100%;
+    height: px2rem(74px);
+    border-bottom: 1px solid #eee;
+
+    li {
+      margin: px2rem(14px) px2rem(20px);
+      float: left;
+      font-size: px2rem(30px);
+      height: px2rem(48px);
+
+      &.active {
+        color: #4fa4d2;
+        border-bottom: 1px solid #4fa4d2;
+      }
+    }
+  }
+}
+
+.list_poster {
+  padding: px2rem(10px);
+
+  li {
+    float: left;
+    width: calc(100%/3);
+    padding: px2rem(10px);
+
+    a {
+      display: block;
+      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    span {
+      height: px2rem(70px);
+      line-height: px2rem(70px);
+      background: #fff;
+      text-align: center;
+      display: block;
+    }
+  }
+}

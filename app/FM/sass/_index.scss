@@ -1,0 +1,183 @@
+.index{
+  background: #f5f5f5;
+  .banner{
+    // padding: px2rem(20px) px2rem(30px);
+    overflow: hidden;
+    .swiper-slide{
+      border-radius: px2rem(10px);
+      overflow: hidden;
+    }
+    .point{
+      margin-top: px2rem(-40px);
+      width: px2rem(690px);
+      ul{
+        margin: auto;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,0);
+      }
+      .swiper-pagination-bullet{
+        width: px2rem(16px);
+        height: px2rem(16px);
+        background: #fff;
+        display: inline-block;
+        margin:0 px2rem(10px);
+        @include borderRadius(50%);
+        opacity: 1;
+        &.swiper-pagination-bullet-active{
+          background: #ff7b09;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .header_box{
+    background: #fff;
+  }
+  .sayhi{
+    padding: px2rem(29px) 0;
+  }
+  .faverite{
+    .img_box{
+      width: px2rem(162px);
+      height: px2rem(162px);
+      border-radius: px2rem(12px);
+      margin-right: px2rem(20px);
+      overflow: hidden;
+      position: relative;
+      @extend .iconfont;
+      @extend .icon-bofang; 
+      &::before {
+        position: absolute;
+        right: px2rem(12px);
+        bottom: px2rem(12px);
+        color: #fff;
+        font-size: px2rem(32px);
+        text-shadow: 0 0 3px #000000;
+      }
+    } 
+    .list{
+      background: #fff;
+      border-bottom: px2rem(2px) solid #ededed;
+      padding: px2rem(20px) px2rem(25px);
+      li{
+        padding: px2rem(30px) px2rem(60px) px2rem(30px) 0;
+        border-bottom: px2rem(2px) solid #ededed;
+        &:last-child{
+          border-width: 0;;
+        }
+      }
+      .content{
+        height: px2rem(124px);
+      }
+      .title{
+        font-size: px2rem(29px);
+        line-height: px2rem(40px);
+        @extend .ov;
+        -webkit-line-clamp: 3;
+      }
+      .bottom{
+        height: px2rem(30px);
+        line-height: px2rem(30px);
+        display: block;
+        em{
+          padding: 0 px2rem(10px);
+        }
+        .listen{
+          @extend .iconfont;
+          @extend .icon-diantai;
+        }
+        .comment{
+          @extend .iconfont;
+          @extend .icon-pinglun;
+        }
+        .like{
+          @extend .iconfont;
+          @extend .icon-xin;
+        }
+      }
+    }
+  }
+  .types{
+    a{
+      padding: px2rem(50px) px2rem(30px) px2rem(50px);
+    }
+  }
+  .category{
+    padding: px2rem(17px) px2rem(15px);
+    .header{
+      padding: px2rem(28px) px2rem(10px);
+      height: px2rem(91px);
+      line-height: px2rem(46px);
+      .tip{
+        font-size: px2rem(35px);
+      }
+      .more{
+        height: px2rem(35px);
+        line-height: px2rem(35px);
+        font-size: px2rem(26px);
+        display: block;
+        color: #8f8f8f;
+        @extend .iconfont;
+        @extend .icon-next01;
+        padding-right: px2rem(36px);
+        @extend .pr;
+        &::before{
+          position: absolute;
+          right: px2rem(10px);
+          font-size: px2rem(32px);
+        }
+      }
+    }
+    .list{
+      li{
+        padding: px2rem(10px);
+        width: 33.3%;
+      }
+      .img_box{
+        width: 100%;
+        border-radius: px2rem(12px);
+        overflow: hidden;
+        position: relative;
+      }
+      .listener{
+        position: absolute;
+        color: #ffffff;
+        z-index: 100;
+        bottom: px2rem(10px);
+        left: px2rem(16px);
+        em{
+          color: #fff;
+          font-weight: 600;
+          @extend .iconfont;
+          @extend .icon-diantai;
+        }
+      }
+      .title{
+        padding: px2rem(10px) 0 0;
+        font-size: px2rem(25px);
+        line-height: px2rem(35px);
+        @extend .ov;
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+  
+}
+.over{
+  width: 100%;
+  text-align: center;
+  padding: px2rem(20px) 0;
+  &::after{
+    content: '';
+    width: 60%;
+    display: block;
+    border-top: px2rem(4px) solid #ededed;
+    margin: px2rem(-20px) 20% 0;
+  }
+  span{
+    background: #f5f5f5;
+    color: #ccc;
+    padding: 0 px2rem(20px);
+  }
+}

@@ -3,7 +3,7 @@
   color: #656565;
   width: px2rem(70px);
   @include setHeight(px2rem(22px));
-  background: url(../images/v4/arrow.png) right 0 no-repeat;
+  background: url(../images/arrow.png) right 0 no-repeat;
   background-size: px2rem(20px);
 }
 .header{
@@ -62,7 +62,7 @@
       width: px2rem(84px);
       height: px2rem(20px);
       display: block;
-      background: url(../images/v4/load_line.png) 0 50% no-repeat;
+      background: url(../images/load_line.png) 0 50% no-repeat;
       background-size: 100%;
       position: absolute;
       margin: px2rem(30px) 0 0 px2rem(-90px);

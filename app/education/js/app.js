@@ -1,44 +1,31 @@
 $(function(){
-  $('.imgbox').on('click', 'li', function(){
+  $('.body .nav .cell').on('click', function(){
     var $this = $(this);
-    var list = $this.parent().find('img');
-    var index = $this.index();
-    var wrapper = $('.swiper-wrapper');
-    var sw = window.screen.width;
-    wrapper.html('').siblings('.loading').show();
-    list.map(function(i, img){
-      var item = $('<div class="swiper-slide"></div>');
-      // if(i == index -1){
-      //   item.addClass('wiper-slide-prev');
-      // }
-      // if(i == index){
-      //   item.addClass('swiper-slide-active');
-      // }
-      // if(i == index + 1){
-      //   item.addClass('wiper-slide-next');
-      // }
-      item.append($(img).clone());
-      wrapper.append(item);
-    });
-    var swiper = new Swiper('.swiper-container');
-    wrapper.parent().show();
-    setTimeout(function(){
-      var active = wrapper.css({'transform': 'translate3d('+(sw * index * -1)+'px, 0px, 0px)'}).find('.swiper-slide').eq(index);
-      active.addClass('swiper-slide-active').siblings().removeClass('swiper-slide-active').removeClass('swiper-slide-next');
-      if(active.prev().length){
-        active.prev().addClass('wiper-slide-prev');
-      }
-      if(active.next().length){
-        active.next().addClass('wiper-slide-next');
-      }
-    }, 200);
-    setTimeout(function(){
-      wrapper.siblings('.loading').hide();
-    }, 400);
+    $this.find('a').addClass('active');
+    $this.siblings().find('a').removeClass('active');
   });
 
-  $('.swiper-container').on('click', '.swiper-slide', function(){
-      $(this).parents('.swiper-container').hide();
+  $('body').on('click', '.video_bar .shoucang', function(){
+    var $this = $(this);
+    if($this.hasClass('icon-shoucang2')){
+      $this.removeClass('icon-shoucang2')
+    } else {
+      $this.addClass('icon-shoucang2')
+    }
+  }).on('click', '.video_bar .prev', function(){
+    
+  }).on('click', '.video_bar .next', function(){
+    
+  }).on('click', '.find .more_read', function(){
+    var $this = $(this);
+    var p = $this.prev().find('p');
+    if(p.hasClass('ov')){
+      p.removeClass('ov');
+      $this.text('收起');
+    } else {
+      p.addClass('ov');
+      $this.text('查看全文');
+    }
   });
   
 })

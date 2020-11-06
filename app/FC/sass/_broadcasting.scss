@@ -87,20 +87,19 @@
       line-height: px2rem(158px);
       color: #fff1a1;
       font-size: px2rem(28px);
-      padding-right: px2rem(28px);
+      padding-right: px2rem(48px);
       background: url(./../images/right.png) 100% 50% no-repeat;
       background-size: px2rem(20px);
     }
   }
   .up_code{
     width: px2rem(120px);
-    position: absolute;
-    right: px2rem(30px);
-    margin-top: px2rem(-80px);
   }
   .qrcode{
-    width: 40%;
+    width: 60%;
     margin:px2rem(40px) auto;
+    padding: 0 px2rem(40px);
+    font-size: px2rem(33px);
   }
   .like_contents{
     .tip{

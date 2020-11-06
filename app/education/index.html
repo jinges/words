@@ -1,0 +1,106 @@
+<!--include "./components/layer/header.html"-->
+
+<link rel="stylesheet" href="./static/swiper/css/swiper.min.css">
+<section class="index">
+  <header class="index_header">
+    <!--include "./components/search.html"-->
+    <div class="nav_index grid">
+      <ul class="cell grid">
+        <li>课堂</li>
+        <li>学员专区</li>
+        <li>名师专栏</li>
+      </ul>
+      <div class="cate">分类</div>
+    </div>
+    <div class="banner pr">
+      <ul  class="swiper-wrapper">
+        <li class="swiper-slide"><a href="javascript:;"><img src="./images/banner.png" alt=""></a></li>
+        <li class="swiper-slide"><a href="javascript:;"><img src="./images/banner.png" alt=""></a></li>
+        <li class="swiper-slide"><a href="javascript:;"><img src="./images/banner.png" alt=""></a></li>
+      </ul>
+      <div class="point swiper-pagination">
+      </div>
+    </div>
+  </header>
+
+  <article class="jinju">
+    <div class="header grid cell--middle">
+      <h2 class="db cell">每日金语</h2>
+      <span class="change"><span class="iconfont icon-huanyipi"></span>换一换</span>
+      <a class="more" href="javascript:;">更多</a>
+    </div>
+    <p>朋友权限想成为杰出的领导者，必须先愿意被领导，一个不愿意被别人领导的人，是不可能为领导者的。一一大脑银行…</p>
+    <div>
+      <ul class="grid bottom">
+        <li class="cell tc"><span class="iconfont icon-aixin"></span><span>34</span></li>
+        <li class="cell tc active"><span class="iconfont icon-xiaoxi"></span><span>4</span></li>
+        <li class="cell tc active"><span class="iconfont icon-fenxiang-"></span><span>分享</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="ganhuo">
+    <div class="header grid cell--middle">
+      <h2 class="cell db">营销干货</h2>
+      <a class="more" href="javascript:;">更多</a>
+    </div>
+    <div class="list">
+      <ul>
+        <!--include "./components/ganhuo.html"-->
+        <!--include "./components/ganhuo.html"-->
+        <!--include "./components/ganhuo.html"-->
+      </ul>
+    </div>
+  </article>
+
+  <article class="jingpin">
+    <div class="header grid cell--middle">
+      <h2 class="cell db">精品专栏</h2>
+      <a class="more" href="javascript:;">更多</a>
+    </div>
+    <div class="content">
+      <img src="./images/jp.png" alt="">
+      <div class="words">
+        <h1 class="title">总裁商业思维</h1>
+        <p class="disc">朋友权限想成为杰出的领导者，必须先愿意被
+          领导，一个不愿意被别人领导的人，是不可能
+          为领导者的。一一大脑银行…</p>
+        <div class="bottom grid">
+          <div class="cell tc"><span class="iconfont icon-details"></span><span>课程详情</span></div>
+          <div class="cell tc"><span class="iconfont icon-ziyuan"></span><span>免费试听</span></div>
+          <div class="cell tc"><span class="iconfont icon-lvzhou_duanxinxiangqing"></span><span>报名咨询</span></div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="shangcheng">
+    <div class="header grid cell--middle">
+      <h2 class="db cell">商城热卖</h2>
+      <span class="change"><span class="iconfont icon-huanyipi"></span>换一换</span>
+      <a class="more" href="javascript:;">更多</a>
+    </div>
+    <div class="list">
+      <ul>
+        <!--include "./components/shangcheng.html"-->
+        <!--include "./components/shangcheng.html"-->
+        <!--include "./components/shangcheng.html"-->
+        <!--include "./components/shangcheng.html"-->
+      </ul>
+    </div>
+    <div class="load_more "><span class="db">已经到底啦</span></div>
+  </article>
+  <div class="top pf"><a href="#body"><img src="./images/top.png" alt=""></a></div>
+</section>
+<!--include "./components/nav_bottom.html"-->
+<script src="./static/swiper/js/swiper.min.js"></script>
+<script>
+  window.onload= function(){
+    var swiper = new Swiper('.banner', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  }
+</script>
+<!--include "./components/layer/footer.html"-->

@@ -1,0 +1,56 @@
+.question{
+  padding: px2rem(20px);
+  font-size: px2rem(34px);
+  h3{
+    padding: 0 0 px2rem(20px);
+  }
+  li{
+    padding: 0 0 px2rem(20px);
+  }
+  .option{
+    padding: px2rem(10px);
+    p{
+      height: px2rem(60px);
+      line-height: px2rem(60px);
+      padding-left: px2rem(50px);
+      margin-bottom: 2px;
+      @each $k, $v in (1:A,2:B,3:C,4:D){
+        &:nth-child(#{$k})::before{
+          content: '#{$v}）';
+          position: absolute;
+          margin-left: px2rem(-40px);
+        }
+      }
+      &.sel{
+        background: #5186eb;
+        color: #fff;
+      }
+      &.right{
+        background: #489a5f;
+        color: #fff;
+      }
+      &.wrong{
+        background: #cb5042;
+        color: #fff;
+      }
+    }
+  }
+  .answer{
+    color: #cb5042;
+    padding-bottom: px2rem(10px);
+    display: none;
+  }
+  .btns{
+    padding: px2rem(20px);
+    .btn{
+      text-align: center;
+      height: px2rem(100px);
+      line-height: px2rem(100px);
+      color: #fff;
+      font-size: px2rem(36px);
+      background: #00b7ff;
+      border-radius: px2rem(16px);
+      display: block;
+    }
+  }
+}

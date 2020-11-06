@@ -45,11 +45,11 @@ gulp.task('concat', function(){
             deepConcat: true,
             baseSrc: './'
         }))
-        // .pipe(replace('./assets/images', '/Public/Wsite/aasydivs/images'))
+        .pipe(replace('./images', paths.origin.pub_imgs))
         .pipe(assetRev({ verStr: "?v="+v }))
         // .pipe(assetRev())
         // .pipe(rename('index.html'))
-        // .pipe(minifyHtml())
+        .pipe(minifyHtml())
         .pipe(gulp.dest(paths.origin.html.build))
         .pipe(livereload());
 });
@@ -58,7 +58,8 @@ gulp.task('sass', function () {
     return gulp.src(paths.origin.styles.source)
         .pipe(sass())
         .pipe(concat('style.css'))
-        // .pipe(replace('./../images', '/Public/Wsite/aasydivs/images'))
+        .pipe(gulp.dest(paths.origin.styles.build))
+        .pipe(replace('../images', paths.origin.pub_imgs))
         .pipe(minifyCss())
         .pipe(rename({
           extname: '.min.css'
@@ -106,6 +107,7 @@ gulp.task('connect', ['concat', 'sass', 'script', 'images', 'fonts', 'static'], 
     connect.server({
         livereload:true,
         root: paths.tmp_root,
+        host: '192.168.0.8',
         port: 8080
     });
 
@@ -118,6 +120,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.origin.styles.source, ['sass']);
     gulp.watch(paths.origin.script.source, ['script']);
     gulp.watch(paths.origin.images.source, ['images']);
+    gulp.watch(paths.origin.images.source, ['static']);
     livereload.listen();
 });
 
@@ -162,6 +165,10 @@ gulp.task('FC-config', function () {
     var notePath = require('./config/fc-path.js');
     paths = notePath;
 })
+gulp.task('FM-config', function () {
+    var notePath = require('./config/FM-path.js');
+    paths = notePath;
+})
 
 gulp.task('web', ['web-config', 'connect', 'watch'])
 
@@ -195,7 +202,10 @@ gulp.task('note', ['note-config', 'connect', 'watch'], function () {
 gulp.task('fc', ['FC-config', 'connect', 'watch'], function () {
     
 })
+gulp.task('FM', ['FM-config', 'connect', 'watch'], function () {
+ 
+})
 
-gulp.task('default', ['fc'], function(){
-    opn('http://localhost:8080');
+gulp.task('default', ['FM'], function(){
+    opn('http://192.168.0.8:8080');
 })

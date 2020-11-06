@@ -1,0 +1,74 @@
+.poster-img{
+  background: #fff;
+  .slide{
+    padding: px2rem(30px) px2rem(80px);
+    .content-box{
+      margin-left: 10rem;
+      height: 0;
+      &.active{
+        margin: 0;
+        height: 100%;
+      }
+    }
+  }
+  .tool{
+    font-size: px2rem(36px);
+    text-align: center;
+    .right{
+      width: px2rem(60px);
+      position: absolute;
+      right: 0;
+      top: 30%;
+      &.left{
+        transform: rotate(180deg);
+        left: 0;
+      }
+    }
+  }
+  .handle{
+    padding:px2rem(20px) px2rem(20px) px2rem(70px);
+  }
+  .btn{
+    color: #fff;
+    font-size: px2rem(30px);
+    width: px2rem(300px);
+    height: px2rem(90px);
+    line-height: px2rem(84px);
+    margin: px2rem(30px);
+    text-align: center;
+    border-radius: px2rem(14px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    em{
+      padding-left: px2rem(46px);
+      margin: auto;
+    }
+    &.btn1{
+      background: #fcb600;
+      em{
+        background: url(../images/WechatIMG1.png) 0 50% no-repeat;
+        background-size: px2rem(34px);
+      }
+    }
+    &.btn2{
+      background: #65a2ff;
+      em{
+        background: url(../images/WechatIMG3.png) 0 50% no-repeat;
+        background-size: px2rem(34px);
+      }
+    }
+  }
+  .other_poster{
+    background: #f5f5f5;
+    padding: px2rem(10px) px2rem(30px);
+    float: left;
+    span{
+      height: px2rem(60px);
+      line-height: px2rem(60px);
+      font-size: px2rem(28px);
+      padding: 0 px2rem(20px);
+    }
+    &::after{
+      clear: both;
+    }
+  }
+}

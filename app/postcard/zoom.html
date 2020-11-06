@@ -1,0 +1,85 @@
+<!--include "./components/layer/header.html"-->
+<link rel="stylesheet" href="./static/swiper/css/swiper.min.css">
+<section class="find">
+  <header >
+    <!-- <div class="topic">
+      <div class="header grid cell--middle">
+        <h2 class="cell db">最新话题</h2>
+        <a class="more" href="javascript:;">更多</a>
+      </div>
+      <ul class="j_list">
+        <li class="j_item">
+          <a href="##" class="grid  cell--middle">
+            <span class="top_title cell">
+              #《领袖思维训练营》#
+            </span>
+            <em class="join_count">422人参与中</em>
+          </a>
+        </li>
+        <li class="j_item">
+          <a href="##" class="grid  cell--middle">
+            <span class="top_title cell">
+              #总裁商业思维学习交流区# <em class="hot"></em>
+            </span>
+            <em class="join_count">3394人参与中</em>
+          </a>
+        </li>
+        <li class="j_item">
+          <a href="##" class="grid  cell--middle">
+            <span class="top_title cell">
+              #框架思维交流区#<em class="hot"></em>
+            </span>
+            <em class="join_count">422人参与中</em>
+          </a>
+        </li>
+      </ul>
+    </div> -->
+    <div class="nav_cate">
+      <ul class="grid">
+        <li class="tc cell active">关注</li>
+        <li class="tc cell">推荐</li>
+        <li class="tc cell">话题</li>
+      </ul>
+    </div>
+  </header>
+  <div class="f_body">
+    <ul>
+      <!--include "./components/find/1.html"-->
+      <!--include "./components/find/2.html"-->
+      <!--include "./components/find/3.html"-->
+      <!--include "./components/find/4.html"-->
+    </ul>
+  </div>
+</section>
+<script src="./static/swiper/js/swiper.js"></script>
+<!--include "./components/swiper.html"-->
+<script>
+  $(function(){
+    var videos = document.querySelectorAll('video');
+    var currentVideo = null;
+    var last_top = 0;
+    videos.forEach(function(video, i){
+      video.addEventListener('play', (event) => {
+        var video = event.target;
+        currentVideo = {
+          index: i,
+          video: video,
+          position: $(video).offset()
+        }
+      });
+    });
+
+    document.body.addEventListener('touchend', (event)=>{
+      var top =  document.documentElement.scrollTop||document.body.scrollTop;
+      if(!currentVideo){
+        return;
+      }
+      if((top > currentVideo.position.top && top > last_top) ||
+      ( top < last_top && top < (currentVideo.position.top - 600))){
+        currentVideo.video.pause();
+      }
+        last_top = top;
+    })
+  })
+</script>
+<!--include "./components/layer/footer.html"-->

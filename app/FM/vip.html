@@ -1,0 +1,72 @@
+<!--include "./components/layer/header.html"-->
+<div class="vip">
+  <div class="wrap">
+    <img src="./images/vip_bg.jpg" alt="">
+  </div>
+
+  <article>
+    <div class="vip_btn" id="buy_vip_btn">
+      <img src="./images/open_vip_btn_orange.gif" alt="">
+    </div>
+    <section class="vip_price_box"> 
+      <div class="mask"></div>
+      <div class="price_box ">
+        <div class="price_top grid">
+          <p class="cell">升级会员</p>
+          <span class="close_box" >X</span>
+        </div>
+        <div class="price_list grid">
+          <div class="price_item selected cell ">
+            <div class="price_item_head pih1">
+              <div class="name">创业会员</div>
+              <div class="date">(1年使用期)</div>
+            </div>
+            <div class="price_item_body">
+              <span class="price">99</span>
+              <div class="old_price">原价<span>399元</span></div>
+              <span class="save_price">立省300元</span>
+            </div>
+          </div>
+          <div class="price_item cell">
+            <div class="price_item_head pih2">
+              <div class="name">精英会员</div>
+              <div class="date">(2年使用期)</div>
+            </div>
+            <div class="price_item_body">
+              <span class="price">169</span>
+              <div class="old_price">原价<span>668元</span></div>
+              <span class="save_price">立省500元</span>
+            </div>
+          </div>
+          <div class="price_item cell">
+            <div class="tuijian">推荐</div>
+            <div class="price_item_head pih3">
+              <div class="name">钻石会员</div>
+              <div class="date">(3年使用期)</div>
+            </div>
+            <div class="price_item_body">
+              <span class="price">199</span>
+              <div class="old_price">原价<span>999元</span></div>
+              <span class="save_price">立省800元</span>
+            </div>
+          </div>
+        </div>
+        <div class="price_bottom">
+          <div class="pay_btn t_c">
+            <span class="total_price">合计：¥<span>0</span>元</span>
+            提交开通</div>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>
+<script>
+  $(function(){
+    $('.price_item').first().trigger('click');
+    $('.pay_btn').on('click', function(){
+      alert('购买流程');
+      $(this).parents('.vip_price_box').hide();
+    });
+  })
+</script>
+<!--include "./components/layer/footer.html"-->

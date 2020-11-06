@@ -1,0 +1,207 @@
+.golden{
+  padding: 0 px2rem(36px) px2rem(36px);
+  h4{
+    font-size: px2rem(30px);
+    line-height: px2rem(36px);
+    color: #2a2a2a;
+    text-align: center;
+    height: px2rem(58px);
+  }
+  .user{
+    padding: px2rem(20px) 0;
+    // position: fixed;
+    // top: 0;
+    // background: #fff;
+    width: 100%;
+    li{
+      margin: px2rem(20px) 0;
+      padding: 0 px2rem(20px);
+      height: px2rem(70px);
+      line-height: px2rem(70px);
+      box-shadow: 0 0 px2rem(4px) #000;
+      overflow: hidden;
+      .name,.post{
+        padding: 0 px2rem(20px);
+      }
+    }
+    a{
+      padding: px2rem(8px) px2rem(14px);
+      border: 1px solid #e8e8e8;
+      border-radius: px2rem(8px);
+      margin: px2rem(10px);
+      display: inline-block;
+      line-height: px2rem(30px);
+    }
+  }
+  .item{
+    border-style: solid;
+    border-width: px2rem(3px);
+    border-radius: px2rem(10px);
+    margin-bottom: px2rem(36px);
+    .content{
+      padding: px2rem(30px) px2rem(20px) px2rem(70px);
+      font-size: px2rem(30px);
+      line-height: px2rem(45px);
+      color: #222222;
+      div{
+        padding-bottom: px2rem(20px);
+        &:last-child{
+          padding: 0;
+        }
+      }
+      h5{
+        font-size: px2rem(26px);
+        color: #f00;
+        display: inline;
+      }
+      p{
+        display: inline;
+      }
+    }
+    .bottom{
+      height: px2rem(100px);
+      line-height: px2rem(100px);
+      color: #fff;
+      font-size: px2rem(30px);
+      padding: 0 px2rem(20px);
+    }
+    .btn{
+      font-size: px2rem(30px);
+      border-style: solid;
+      border-width: px2rem(2px);
+      padding: px2rem(4px) px2rem(14px);
+      border-radius: px2rem(6px);
+    }
+    .like{
+      margin: 0 px2rem(10px);
+      font-size: px2rem(24px);
+      padding: px2rem(4px);
+      height: px2rem(40px);
+      line-height: px2rem(34px);
+    }
+    .copy{
+      height: px2rem(44px);
+      line-height: px2rem(36px);
+      background: #fff;
+      position: absolute;
+      margin-top: px2rem(-60px);
+      right: px2rem(66px);
+    }
+    .zan{
+      line-height: px2rem(22px);
+      padding-top: px2rem(46px);
+      position: relative;
+      @extend .iconfont;
+      &::before{
+        font-size: px2rem(28px) !important;
+        left: 50%;
+        margin: px2rem(-32px) 0 0 px2rem(-14px)!important;
+      }
+      &::after{
+        content: '点赞';
+        font-size: px2rem(20px);
+        position: absolute;
+        left: 50%;
+        margin: px2rem(-48px) 0 0 px2rem(-20px);
+      }
+      em{
+        padding-top: px2rem(20px);
+        font-size: px2rem(23px);
+        min-width: px2rem(60px);
+        text-align: center;
+        display: block;
+      }
+
+      &::before{
+        content: "\e663";
+        font-size: px2rem(40px);
+        position: absolute;
+        margin: px2rem(-32px) 0 0 px2rem(30px);
+      }
+    }
+    &:nth-child(2n+1){
+      border-color: #38a508;
+      .bottom{
+        background: #38a508;
+        .copy{
+          border-color: #38a508;
+          color: #38a508;
+        }
+      }
+    }
+    &:nth-child(2n){
+      border-color: #0378fb;
+      .bottom{
+        background: #0378fb;
+        .copy{
+          border-color: #0378fb;
+          color: #0378fb;
+        }
+      }
+    }
+  }
+  .form{
+    font-size: px2rem(30px);
+    height: px2rem(400px);
+    h5{
+      font-size: px2rem(30px);
+      padding: px2rem(40px) 0;
+    }
+    .input{
+      border: 1px solid #eee;
+      padding: 0 px2rem(20px);
+      height: px2rem(80px);
+      line-height: px2rem(80px);
+    }
+    .btn{
+      height: px2rem(80px);
+      line-height: px2rem(80px);
+      padding: 0 px2rem(40px);
+      background: #eee;
+      margin-left: px2rem(20px);
+    }
+  }
+  .dialog{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba($color: #000000, $alpha: .2);
+    .dialog_box{
+      width: 90%;
+      height: auto;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50% );
+      padding: px2rem(30px);
+      border-radius: px2rem(10px);
+      text-align: center;
+      font-size: px2rem(32px);
+    }
+
+    em{
+      color: #f00;
+    }
+    .qr{
+      width: px2rem(200px);
+      padding-top: px2rem(40px);
+      margin: auto;
+    }
+    .bottom{
+      padding-top: px2rem(40px);
+      .btn{
+        height: px2rem(80px);
+        line-height: px2rem(80px);
+        display: inline-block;
+        padding: 0 px2rem(30px);
+        background: #2d840b;
+        color: #fff;
+        border-radius: px2rem(8px);
+      }
+    }
+  }
+}

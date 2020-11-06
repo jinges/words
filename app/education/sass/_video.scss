@@ -1,0 +1,113 @@
+.video-js{
+  font-size: px2rem(20px);
+  .vjs-control-bar{
+    padding: 0 px2rem(25px);
+    opacity: 1 !important;
+    visibility: visible;
+    transition: visibility 0.1s, opacity 0.1s;
+    display: flex;
+    height: px2rem(60px);
+  }
+  .vjs-progress-holder{
+    height: px2rem(3px) !important;
+  }
+  .vjs-progress-control{
+    position: absolute;
+    width: 100%;
+    height: px2rem(40px);
+    margin-top: px2rem(-30px);
+    left: 0;
+    &:hover{
+      .vjs-progress-holder {
+        font-size: 1em;
+      }
+    }
+  }
+  .vjs-play-progress::before{
+    font-size: px2rem(12px);
+  }
+  .vjs-picture-in-picture-control{
+    display: none;
+  }
+  .vjs-remaining-time{
+    display: none;
+  }
+  .vjs-duration,.vjs-time-divider,.vjs-current-time{
+    display: block;
+    text-align: center;
+    min-width: auto;
+    padding: 0 px2rem(4px)
+  }
+  .vjs-volume-panel{
+    position: absolute;
+    right: px2rem(90px);
+    width: px2rem(220px) !important;
+    .vjs-mute-control{
+      width: px2rem(40px);
+    }
+    .vjs-volume-control{
+      opacity: 1;
+      width: px2rem(180px) !important;
+    }
+    .vjs-slider-horizontal{
+      opacity: 1;
+      width: px2rem(180px) !important;
+      height: px2rem(3px) !important;
+    }
+    .vjs-volume-level{
+      height: px2rem(3px) !important;
+      &::before{
+        font-size: px2rem(12px);
+        // margin-top: px2rem(-1px);
+      }
+    }
+  }
+  .vjs-fullscreen-control{
+    position: absolute;
+    right: px2rem(10px);
+    width: px2rem(60px);
+    height: px2rem(60px);
+    transform: rotate(90deg);
+    // .vjs-icon-placeholder{
+    //   color: #f00;
+    //   &::before{
+    //     content: "\e73b";
+    //     font-size: px2rem(24px);
+    //     margin-top: px2rem(10px);
+    //   }
+    // }
+  }
+  .vjs-play-control{
+    position: absolute;
+    top: px2rem(60px);
+    left: 50%;
+    height: px2rem(80px);
+    line-height: px2rem(80px);
+    transform: translateX(-50%);
+    .vjs-icon-placeholder::before{
+      margin-top: px2rem(8px);
+      font-size: px2rem(40px);
+    }
+  }
+  .vjs-custom-control-spacer + div {
+    position: absolute;
+    top: px2rem(76px);
+    right: px2rem(20px);
+    font-size: px2rem(14px);
+    border-radius: 50%;
+    width: px2rem(50px);
+    height: px2rem(50px);
+    display: block;
+    background: #f78407;
+    .vjs-playback-rate-value{
+      line-height: px2rem(50px);
+    }
+  }
+  .vjs-big-play-button{
+    display: none;
+    opacity: 0;
+  }
+  .vjs-play-control{
+    color: #000;
+  }
+}

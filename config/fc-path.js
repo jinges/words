@@ -40,7 +40,8 @@ var pcpaths = {
                 root + '/js/*.js',
             ],
             build: tmp_root + '/assets/js'
-        }
+        },
+        pub_imgs: './assets/images' 
     },
     tmp_root: tmp_root
 }

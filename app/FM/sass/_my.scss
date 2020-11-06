@@ -1,0 +1,60 @@
+.my{
+  background: #f5f5f5;
+  .person_head{
+    padding: px2rem(20px);
+    color: #fff;
+    background: #fff;
+    .photo{
+      width: px2rem(120px);
+      height: px2rem(120px);
+    }
+    .card{
+      padding: px2rem(37.5px) px2rem(40px);
+      background: rgb(242, 80, 78);
+      border-radius: px2rem(20px);
+    }
+    .disc{
+      padding: px2rem(30px) 0 0 px2rem(20px);
+      .phone{
+        color: #fff;
+        background: url(../images/my/1582041112944.png) 0 50% no-repeat;
+        background-size: px2rem(30px);
+        padding: px2rem(6px) px2rem(36px);
+      }
+      .date{
+        font-size: px2rem(26px);
+        padding: px2rem(8px) 0;
+      }
+    }
+    .v_icon{
+      width: px2rem(110px);
+      padding: px2rem(30px);
+    }
+  }
+  .person_body{
+    padding-bottom: px2rem(20px);
+    .tip{
+      padding: px2rem(16px);
+      font-weight: 400;
+      font-size: px2rem(30px);
+    }
+    .nav{
+      background: #fff;
+      text-align: center;
+      a{
+        padding: px2rem(20px) px2rem(15px);
+        border-right: 1px solid #eee;
+      }
+      .title{
+        height: px2rem(60px);
+        line-height: px2rem(80px);
+        display: block;
+        color: #000;
+        font-size: px2rem(30px);
+      }
+      img{
+        width: px2rem(66px);
+      }
+    }
+  }
+}

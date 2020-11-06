@@ -1,0 +1,230 @@
+.info{
+  .header{
+    height: px2rem(755px);
+    @extend .pr;
+    .bg_img{
+      @extend .pa;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .card{
+    padding: px2rem(40px) px2rem(30px);
+    width: 100%;
+    bottom: 0;
+    @extend .pa;
+    .grid{
+      background: #fff;
+      padding: px2rem(24px)  px2rem(40px)  px2rem(24px) px2rem(20px);
+      color: #373737;
+      border-radius: px2rem(20px);
+      overflow: hidden;
+    }
+    .photo{
+      width: px2rem(115px);
+      height: px2rem(115px);
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: px2rem(20px);
+    }
+    .name{
+      font-size: px2rem(35px);
+      padding: px2rem(10px);
+    }
+    .phone{
+      font-size: px2rem(30px);
+    }
+    .btn_change{
+      margin-top: px2rem(32px);
+      width: px2rem(186px);
+      height: px2rem(50px);
+      line-height: px2rem(50px);
+      border-radius: px2rem(30px);
+      background-color: #f7bd0c;
+      font-size: px2rem(27px);
+      letter-spacing: px2rem(3px);
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+  .body{
+    padding: 0 px2rem(30px);
+    border-top: px2rem(4px) solid #f5f5f5;
+  }
+  .nav {
+    padding: px2rem(30px) 0;
+    span{
+      font-weight: 600;
+      font-size: px2rem(32px);
+      padding-bottom: px2rem(20px);
+      &.active{
+        border-bottom: px2rem(2px) solid  #f7bd0c;
+      }
+    }
+  }
+  .comment{
+    .defaultbox{
+      height: px2rem(80px);
+      background: #f9f9f9;
+      border-radius: px2rem(100px);
+      overflow: hidden;
+      padding: px2rem(6px);
+      .txt{
+        background: #f9f9f9;
+        padding-left: px2rem(10px);
+        font-size: px2rem(28px);
+      }
+      .btn{
+        width: px2rem(120px);
+        line-height: px2rem(72px);
+        background-color: #f7bd0c;
+        border-radius: px2rem(100px);
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+
+    .item{
+      padding-top: px2rem(30px);
+    }
+    .photo_box{
+      width: px2rem(80px);
+      height: px2rem(80px);
+      border-radius: 50%;
+      overflow: hidden;
+      margin: px2rem(10px) px2rem(20px) 0 0;
+    }
+    .disc{
+      padding: px2rem(20px) px2rem(30px);
+      background: #f9f9f9;
+      border-radius: px2rem(30px);
+      p{
+        padding: px2rem(10px) 0;
+        line-height: 1.5;
+      }
+      .bottom{
+        color: #ccc;
+      }
+      .date{
+        height: px2rem(48px);
+        line-height: px2rem(48px);
+      }
+      .zan{
+        background: #fff;
+        padding: px2rem(4px) px2rem(12px);
+        border-radius: px2rem(100px);
+        &::before{
+          font-size: px2rem(36px);
+        }
+      }
+    }
+    .name{
+      font-size: px2rem(26px);
+      color: #ccc;
+    }
+  }
+  .content{
+    display: none;
+    padding: px2rem(10px) 0 0;
+    p{
+      padding: px2rem(6px) 0;
+      line-height: 1.4em;
+      font-size: px2rem(28px);
+    }
+  }
+  .dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .3);
+    padding: px2rem(20px);
+    display: none;
+    .tip{
+      padding: px2rem(20px) 0;
+    }
+    .photo_box{
+      width: px2rem(100px);
+      height: px2rem(100px);
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: px2rem(20px);
+    }
+    .pro{
+      height: px2rem(100px);
+      line-height: px2rem(100px);
+      color: #fff;
+      font-weight: 700;
+    }
+    .box{
+      background: #fff;
+      border-radius: px2rem(30px);
+      overflow: hidden;
+      padding: px2rem(20px);
+    }
+    .comment_input{
+      padding: px2rem(10px);
+      width: 100%;
+    }
+    .btn{
+      padding: px2rem(10px) px2rem(30px);
+      border-radius: px2rem(50px);
+      font-weight: 500;
+      &.ok{
+        background: #ccc;
+        color: #989898;
+      }
+      &.cancel{
+        background: #e8e8e8;
+        color: #000;
+      }
+    }
+  }
+  .mp{
+    padding-top: px2rem(80px);
+    h2{
+      font-size: px2rem(32px);
+      padding: px2rem(20px) 0;
+      color: #a34ae6;
+    }
+    .box_img{
+      border: px2rem(2px) solid #a34ae6;
+      padding: px2rem(60px) 0;
+      img{
+        width: px2rem(280px);
+        margin: auto;
+        display: block;
+      }
+    }
+    .card{
+      margin: px2rem(20px) 0 px2rem(40px);
+      padding: px2rem(10px);
+      position: static;
+      border: px2rem(2px) solid #a34ae6;
+      .photo{
+        width: px2rem(140px);
+        height: px2rem(140px);
+        margin: px2rem(20px);
+      }
+      .name{
+        padding: px2rem(40px) 0 0;
+        font-size: px2rem(36px);
+      }
+    }
+    .qr{
+      width: px2rem(180px);
+    }
+    .btn_change{
+      height: px2rem(80px);
+      line-height: px2rem(80px);
+      display: block;
+      text-align: center;
+      background: #a34ae6;
+      color: #fff;
+      font-size: px2rem(32px);
+      font-weight: 700;
+      border-radius: px2rem(10px);
+    }
+  }
+}

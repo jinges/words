@@ -1,5 +1,5 @@
 var root = 'app/postcard';
-var tmp_root = 'build/postcard';
+var tmp_root = '/Users/feng/Documents/works/vue/guo/postcard';
 var pcpaths = {
     origin:{
         root: root,
@@ -40,7 +40,8 @@ var pcpaths = {
                 root + '/js/*.js',
             ],
             build: tmp_root + '/js/v3'
-        }
+        },
+        pub_imgs: '/Public/Wsite/postcard/images'
     },
     tmp_root: tmp_root
 }

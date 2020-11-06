@@ -1,0 +1,120 @@
+.vip{
+  .vip_btn{
+    position: fixed;
+    bottom: px2rem(15px);
+    width: px2rem(352px);
+    display: block;
+    left: 50%;
+    transform: translate(px2rem(-176px), 0);
+  }
+  .price_box{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9999999;
+    width: 100%;
+    color: #262626;
+  }
+  .price_top{
+    padding: px2rem(20px);
+    background: #ededed;
+    font-size: px2rem(36px);
+    .close_box{
+      font-size: px2rem(26px);
+        width: px2rem(52px);
+        height: px2rem(52px);
+        line-height: px2rem(52px);
+        display: block;
+        text-align: center;
+        background: #ff6000;
+        border-radius: 50%;
+        color: #fff;
+    }
+  }
+  .vip_price_box{
+    display: none;
+  }
+  .price_list{
+    padding: px2rem(44px) 0;
+    .price_item{
+      border: 1px solid #ededed;
+      margin: 0 px2rem(20px);
+      border-radius: px2rem(15px);
+      overflow: hidden;
+      text-align: center;
+      &.selected{
+        border: 1px solid #FCBA46;
+        background: #ffefde;
+      } 
+      .name{
+        font-size: px2rem(28px);
+      }
+      .price{
+        font-size: px2rem(36px);
+        color: #f00;
+        &::after{
+          content: '元';
+        }
+      }
+    }
+    .price_item_head{
+      padding: px2rem(15px) 0;
+    }
+    .pih1{
+      background: linear-gradient(to right, #ecf5fc , #d5eafb);
+    }
+    .pih2{
+      background:linear-gradient(to right, #fef3f7 , #f9d9ec);
+    }
+    .pih3{
+      background: linear-gradient(to right, #f8f0c6 , #f6dc91);
+    }
+    .price_item_body{
+      padding: px2rem(22px);
+    }
+    .old_price{
+      color: #8a8b87;
+      span{
+        text-decoration: line-through;
+      }
+    }
+    .save_price{
+      background: #ff8000;
+      color: white;
+      font-size: px2rem(18px);
+      padding: px2rem(2px) px2rem(22px);
+      border-radius: px2rem(15px);
+      margin-top: px2rem(6px);
+      display: block;
+    }
+    .tuijian{
+      position: absolute;
+        right: px2rem(20px);
+        margin-top: px2rem(-22px);
+        padding: px2rem(5px) px2rem(12px);
+        background: #f00;
+        color: #fff;
+        border-radius: 0 px2rem(15px);
+        font-size: px2rem(24px);
+    }
+  }
+  .price_bottom{
+    padding: 0 px2rem(22px) px2rem(30px);
+  }
+  .pay_btn{
+    height: px2rem(66px);
+      line-height: px2rem(66px);
+      background: #f00;
+      color: #fff;
+      font-size: px2rem(26px);
+      display: block;
+      border-radius: px2rem(15px);
+      position: relative;
+      text-align: center;
+  }
+  .total_price{
+    position: absolute;
+    left: px2rem(15px);
+  }
+}
