@@ -1,35 +1,57 @@
 .nav_bottom {
   left: 0;
   bottom: 0;
+  // top:100px;
   width: 100vw;
   background: #fff;
   z-index: 99999;
-  box-shadow: 0 -1px 5px #e7e7e7;
   ul{
-    height: px2rem(100px);
+    height: px2rem(170px);
+    padding: px2rem(27px) 0 px2rem(52px);
+    border-top: px2rem(2px) solid #eee;
   } 
   li{
     @extend .tc;
-    &.active a{
-      color: #f59a48;
+    .nav_icon{
+      width: px2rem(60px);
+      height: px2rem(60px);
+      display: block;
+      margin: auto;
+      @for $i from 1 to 5 {
+        &.n#{$i}{
+          background: url(./../images/nav/n#{$i}.png) 0 0 no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+    &.active{
+      em{
+        color: #ff6533;
+      }
+      @for $i from 1 to 5 {
+        .n#{$i}{
+          background: url(./../images/nav/n#{$i}1.png) 0 0 no-repeat;
+          background-size: 100%;
+        }
+      }
     }
   }
   .photo{
-    width: px2rem(120px);
-    height: px2rem(120px);
-    padding: px2rem(4px);
+    width: px2rem(104px);
+    height: px2rem(104px);
+    // padding: px2rem(4px);
     border-radius: 50%;
-    background: #f00;
-    margin-top: px2rem(-60px);
+    margin-top: px2rem(-48px);
     display: block;
-    border-width: 0;
     .photo_box{
-      width: px2rem(112px);
-      height: px2rem(112px);
-      border: px2rem(4px) solid #fff;
+      width: px2rem(98px);
+      height: px2rem(98px);
+      // border: px2rem(4px) solid #fff;
       display: block;
       border-radius: 50%;
+      overflow: hidden;
       background: #fff;
+      margin-bottom: px2rem(5px);
       &.playing{
         -webkit-animation: circle 5s linear infinite;
         -ms-animation: circle 5s linear infinite;
@@ -39,28 +61,23 @@
     &.vip{
       &::after{
         content: '';
-        width: px2rem(50px);
-        height: px2rem(50px);
+        width: px2rem(40px);
+        height: px2rem(40px);
         display: block;
         background: url(../images/V.png) 0 0 no-repeat;
         background-size: 100%;
         position: absolute;
-        margin: px2rem(-20px) 0 0 px2rem(35px);
+        margin: px2rem(-150px) 0 0 px2rem(50px);
       }
     }
   }
-  a{
-    color: #323232;
-  }
-  .iconfont{
-    font-size: px2rem(40px);
-    display: block;
-    width: 100%;
-  }
   em{
     font-size: px2rem(22px);
+    height: px2rem(29px);
+    line-height: px2rem(39px);
     display: block;
     width: 100%;
+    color: #323232;
   }
 
   @keyframes circle {

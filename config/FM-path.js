@@ -41,8 +41,8 @@ var pcpaths = {
             ],
             build: tmp_root + '/js'
         },
-        pub_imgs: './images',
-        // pub_imgs: '/Public/Wsite/aasyfm/images'
+        // pub_imgs: './images',
+        pub_imgs: '/Public/Wsite/aasyfm/images'
     },
     tmp_root: tmp_root
 }

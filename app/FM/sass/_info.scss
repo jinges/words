@@ -1,60 +1,73 @@
 .info{
   .header{
     @extend .pr;
-    padding: px2rem(40px) px2rem(60px);
+    padding: 0 px2rem(60px) px2rem(86px);
     .title{
       font-size: px2rem(44px);
       letter-spacing: px2rem(2px);
       font-weight: normal;
-      padding: px2rem(30px) 0;
+      padding: px2rem(60px) 0;
     }
     img{
-      margin: px2rem(30px) 0;
       box-shadow: 0 0 9px 0px #8e8e8e;
     }
   }
   .card{
-    padding: px2rem(40px) px2rem(30px);
+    padding: px2rem(20px) 0;
     width: 100%;
-    bottom: 0;
-    @extend .pa;
-    .grid{
-      background: #fff;
-      padding: px2rem(24px)  px2rem(40px)  px2rem(24px) px2rem(20px);
-      color: #373737;
-      border-radius: px2rem(20px);
-      overflow: hidden;
-    }
+    border-bottom: px2rem(4px) solid #ff6533;
     .photo{
-      width: px2rem(115px);
-      height: px2rem(115px);
+      width: px2rem(150px);
+      height: px2rem(150px);
       border-radius: 50%;
       overflow: hidden;
       margin-right: px2rem(20px);
+      &::before{
+        content: '';
+        width: px2rem(20px);
+        height: px2rem(20px);
+        display: block;
+        border-radius: 50%;
+        background: #ff6432;
+        position: absolute;
+        margin: px2rem(-18px) 0 0 px2rem(-20px);
+      }
     }
     .name{
-      font-size: px2rem(35px);
+      font-size: px2rem(40px);
       padding: px2rem(10px);
     }
     .phone{
       font-size: px2rem(30px);
+      padding-left: px2rem(10px);
     }
-    .btn_change{
+    .btn_kehu{
       margin-top: px2rem(32px);
-      width: px2rem(186px);
-      height: px2rem(50px);
-      line-height: px2rem(50px);
-      border-radius: px2rem(30px);
-      background-color: #f7bd0c;
-      font-size: px2rem(27px);
-      letter-spacing: px2rem(3px);
+      width: px2rem(180px);
+      height: px2rem(70px);
+      line-height: px2rem(70px);
+      border-radius: px2rem(70px);
+      background-color: #ff6432;
+      font-size: px2rem(30px);
       text-align: center;
       color: #ffffff;
     }
   }
   .body{
+    padding: 0 px2rem(27px);
+  }
+  .shop_panal{
+    border: px2rem(2px) solid #eee;
     padding: 0 px2rem(30px);
-    border-top: px2rem(4px) solid #f5f5f5;
+    border-radius: px2rem(20px);
+    box-shadow: 0 4px 6px #e4e4e4;
+  }
+  .shop_body{
+    width: 100%;
+    height: px2rem(260px);
+    background: url(./../images/shop_tip.jpg) 0 50% no-repeat;
+    background-size: 50vw;
+    padding: px2rem(20px) 0 px2rem(20px) 54vw;
   }
   .nav {
     padding: px2rem(30px) 0;
@@ -68,7 +81,7 @@
     }
   }
   .content{
-    padding: px2rem(10px) 0 0;
+    padding: px2rem(70px) px2rem(4px) 0;
     p{
       padding: px2rem(6px) 0;
       line-height: 1.5em;

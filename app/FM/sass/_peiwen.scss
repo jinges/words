@@ -18,3 +18,11 @@
   color: #646464;
   font-size: px2rem(31px);
 }
+.toTop{
+  width: px2rem(70px);
+  height: px2rem(70px);
+  position: fixed;
+  border-radius: 50%;
+  right: px2rem(20px);
+  bottom: px2rem(440px);
+}
