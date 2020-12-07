@@ -1,0 +1,243 @@
+.audio{
+  .audio_head {
+    background: #fff;
+  
+    .progress_box {
+      width: 100%;
+      height: px2rem(4px);
+      background: #eaeaea;
+      display: block;
+      position: relative;
+    }
+    .progress_bar {
+      height: px2rem(4px);
+      background: #ff6533;
+      display: block;
+      position: absolute;
+      border-radius: px2rem(6px);
+    }
+    .progress_btn{
+      width: px2rem(16px);
+      height: px2rem(16px);
+      display: block;
+      background: #ff6533;
+      border-radius: 50%;
+      position: absolute;
+      margin-top: px2rem(-5px);
+    }
+  
+    .progress_state {
+      display: none;
+      padding: px2rem(16px);
+      color: #8b8b8b;
+      font-size: px2rem(24px);
+    }
+  
+    .audio_body {
+      padding-top: 10px;
+    }
+  }
+  
+  .ward {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  
+    &:active {
+      box-shadow: 0 0 5px #d0d0d0;
+    }
+  }
+  
+  .audio_body{
+    padding: px2rem(50px) px2rem(60px);
+    height: px2rem(188px);
+    .player{
+      padding: 0 px2rem(60px);
+      justify-content: space-between;
+      .switch {
+        width: px2rem(88px);
+        height: px2rem(88px);
+        line-height: px2rem(88px);
+        font-size: px2rem(38px);
+        overflow: hidden;
+        text-align: center;
+        color: #fff;
+        @extend .iconfont;
+        border-radius: 50%;
+        display: block;
+        background: #cacaca;
+        display: block;
+        &.play {
+          @extend .icon-bofang; 
+            &::before{
+              margin-left: px2rem(10px);
+            }
+        }
+        &.pause {
+          @extend .icon-zanting; 
+          &::before{
+            margin-left: 0;
+          }
+        }
+        &.none {
+          background: #ebebeb;
+        }
+        &.next{
+          @extend .icon-xiayishou; 
+        }
+        &.prev {
+          @extend .icon-xiayishou; 
+          transform: rotate(180deg);
+        }
+      }
+      
+    }
+    .speed {
+      font-size: px2rem(26px);
+      text-align: center;
+      width: px2rem(70px);
+      height: px2rem(70px);
+      line-height: px2rem(70px);
+      border-radius: 50%;
+      margin-top: px2rem(5px);
+      display: block;
+      box-shadow: 0 0 10px #e0e0e0;
+    }
+    .list {
+      @extend .speed;
+    }
+  }
+  
+  .audio_footer {
+    display: none;
+    .mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #0e0e0ec2;
+      z-index: 999991;
+    }
+    
+    .sources {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      background: #fff;
+      border-radius: 10px 10px 0 0;
+      padding: 0 px2rem(30px);
+      z-index: 999992;
+      .tip {
+        font-size: px2rem(40px);
+        letter-spacing: 1px;
+        color: #ff6533;
+        height: px2rem(140px);
+        line-height: px2rem(140px);
+      }
+      .close{
+        width: px2rem(70px);
+        height: px2rem(70px);
+        display: block;
+        margin-top: px2rem(36px);
+        background: url(../images/plc.png) 0 0 no-repeat;
+        background-size: px2rem(70px);
+      }
+      li {
+        font-size: px2rem(36px);
+        color: #363535;
+        padding: px2rem(70px) 0 px2rem(70px) px2rem(90px);
+        border-top: 1px solid #eaeaea;
+        background: url(../images/pl1.png) 0 px2rem(60px) no-repeat;
+        background-size: px2rem(70px);
+        line-height: 1.6em;
+        &.active{
+          font-weight: 800;
+          background-image: url(../images/pl2.png);
+        }
+      }
+    }
+  }
+  
+  .fadeout {
+    -webkit-animation: fadeout .5s;
+    -ms-animation: fadeout .5s;
+    animation: fadeout .5s
+  }
+  
+  .fadein {
+    -webkit-animation: fadein .5s;
+    -ms-animation: fadein .5s;
+    animation: fadein .5s
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+  
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+  
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+  
+  @keyframes fadeout {
+    from {
+      opacity: 1
+    }
+  
+    to {
+      opacity: 0
+    }
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {
+      opacity: 1
+    }
+  
+    to {
+      opacity: 0
+    }
+  }
+  
+  @-ms-keyframes fadeout {
+    from {
+      opacity: 1
+    }
+  
+    to {
+      opacity: 0
+    }
+  }
+
+  .title{
+    @extend .ov;
+    -webkit-line-clamp: 2;
+    padding: 0 px2rem(50px);
+    font-size: px2rem(40px);
+    line-height: px2rem(60px);
+    color: #373737;
+    font-weight: 500;
+  }
+}

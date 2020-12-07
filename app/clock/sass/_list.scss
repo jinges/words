@@ -1,0 +1,140 @@
+.list{
+  padding: 0 px2rem(27px);
+  .header{
+    height: px2rem(41px);
+    line-height: px2rem(41px);
+    font-size: px2rem(44px);
+    margin: px2rem(73px) 0;
+    text-align: center;
+    span{
+      min-width: px2rem(160px);;
+      color: #fe7a00;
+      font-size: px2rem(76px);
+      height: px2rem(48px);
+      line-height: px2rem(48px);
+      display: inline-block;
+      top: px2rem(-4px);
+      position: relative;
+    }
+  }
+  .calender{
+    box-shadow: 0px px2rem(6px) px2rem(30px) 0px rgba(129, 129, 129, 0.4);
+    border-radius: px2rem(90px);
+    padding: px2rem(16px);
+  }
+  .month{
+    height: px2rem(108px);
+    line-height: px2rem(110px);
+    padding: 0 px2rem(20px);
+    .current_month{
+      font-size: px2rem(41px);
+      color: rgba(0, 152, 101, 1);
+    }
+    .prev_month{
+      width: px2rem(40px);
+      height: px2rem(108px);
+      background: url(../images/left.png) 50% 50% no-repeat;
+      background-size: px2rem(12px) px2rem(22px);
+    }
+    .next_month{
+      @extend .prev_month;
+      background: url(../images/right.png) 50% 50% no-repeat;
+      background-size: px2rem(12px) px2rem(22px);
+    }
+  }
+  $pad: px2rem(40px);
+  .week{
+    li{
+      width: calc(100% / 7);
+      display: inline-block;
+      font-size: px2rem(32px);
+      color: rgba(153, 153, 153, 1);
+      text-align: center;
+    }
+  }
+  .date{
+    @extend .week;
+    li{
+      position: relative;
+      padding: px2rem(10px) 0 px2rem(20px);
+      span{
+        width: px2rem(60px);
+        height: px2rem(60px);
+        line-height: px2rem(60px);
+        display: block;
+        @extend .tc;
+        margin: auto;
+        border-radius: 50%;
+      }
+      &.signed{
+        span::after{
+          content: '✓';
+          font-size: px2rem(28px);
+          color: rgba(0, 152, 101, 1);
+          position: absolute;
+          width: px2rem(74.4px);
+          height: px2rem(20px);
+          line-height: 1;
+          display: block;
+        }
+      }
+
+      &.today{
+        span{
+          background: rgba(0, 152, 101, 1);
+          color: #fff;
+        }
+      }
+    }
+  }
+  .draw_list{
+    padding: px2rem(75px) 0;
+    li{
+      padding: px2rem(25px) 0 px2rem(25px) px2rem(50px);
+      font-size: px2rem(30px);
+      &::before{
+        content: '';
+        width: px2rem(10px);
+        height: px2rem(10px);
+        background: #C2C2C2;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        margin: px2rem(14px) 0 0 px2rem(-40px);
+      }
+    }
+    .date{
+      width: px2rem(180px);
+    }
+    .count_down{
+      color: #D70606;
+      position: relative;
+      top: px2rem(-2px);
+      em{
+        font-size: px2rem(36px);
+        top: px2rem(-3px);
+        position: relative;
+      }
+    }
+    .btn{
+      width: px2rem(153px);
+      height: px2rem(56px);
+      line-height: px2rem(56px);
+      background: #009865;
+      border-radius: px2rem(28px);
+      text-align: center;
+      color: #fff;
+      border: 1px solid 009865;
+      &.drawed{
+        background: rgba(0, 152, 101, 0);
+        border: 1px solid #999999;
+        color: rgba(102, 102, 102, 1);
+      }
+      &.missed{
+        color: #999999;
+        background: rgba(0, 152, 101, 0);
+        border: 1px solid #999999;
+      }
+    }
+  }
+}

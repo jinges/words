@@ -6,15 +6,15 @@
   background: #fff;
   z-index: 99999;
   ul{
-    height: px2rem(170px);
-    padding: px2rem(27px) 0 px2rem(52px);
+    height: px2rem(136px);
+    padding: px2rem(20px) 0 px2rem(28px);
     border-top: px2rem(2px) solid #eee;
   } 
   li{
     @extend .tc;
     .nav_icon{
-      width: px2rem(60px);
-      height: px2rem(60px);
+      width: px2rem(54px);
+      height: px2rem(54px);
       display: block;
       margin: auto;
       @for $i from 1 to 5 {
@@ -41,7 +41,7 @@
     height: px2rem(104px);
     // padding: px2rem(4px);
     border-radius: 50%;
-    margin-top: px2rem(-48px);
+    margin-top: px2rem(-54px);
     display: block;
     .photo_box{
       width: px2rem(98px);
@@ -51,7 +51,7 @@
       border-radius: 50%;
       overflow: hidden;
       background: #fff;
-      margin-bottom: px2rem(5px);
+      margin-bottom: px2rem(8px);
       &.playing{
         -webkit-animation: circle 5s linear infinite;
         -ms-animation: circle 5s linear infinite;
@@ -67,12 +67,12 @@
         background: url(../images/V.png) 0 0 no-repeat;
         background-size: 100%;
         position: absolute;
-        margin: px2rem(-150px) 0 0 px2rem(50px);
+        margin: px2rem(-64px) 0 0 px2rem(64px);
       }
     }
   }
   em{
-    font-size: px2rem(22px);
+    font-size: px2rem(28px);
     height: px2rem(29px);
     line-height: px2rem(39px);
     display: block;

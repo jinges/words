@@ -1,0 +1,4 @@
+//px转rem
+@function px2rem($px: 100px) {
+  @return #{$px / $baseSize}rem;
+}

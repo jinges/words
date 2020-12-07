@@ -1,0 +1,26 @@
+.mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: .3);
+}
+.toast{
+  padding: px2rem(10px) px2rem(30px);
+  height: px2rem(60px);
+  line-height: px2rem(40px);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  z-index: 9999999999;
+  border-radius: 4px;
+  color: #fff;
+  font-size: px2rem(26px);
+  background: rgba(74, 72, 72, 0.43);
+  text-align: center;
+  box-sizing: border-box;
+}

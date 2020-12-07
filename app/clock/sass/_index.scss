@@ -1,0 +1,18 @@
+.index{
+  padding: 0 px2rem(30px) px2rem(140px);
+  border-radius: px2rem(10px) px2rem(10px) 0px 0px;
+  background: #fff;
+  .clock_detail{
+    padding: px2rem(57px) 0 0;
+  }
+}
+.clock_tip{
+  div{
+    padding-top: px2rem(70px);
+    font-size: px2rem(34px);
+    line-height: 1.5;
+  }
+  h5{
+    font-size: px2rem(38px);
+  }
+}

@@ -1,0 +1,73 @@
+.clock_detail{
+  width: 100%;
+  // height: px2rem(534px);
+  text-align: center;
+  padding: px2rem(40px) 0;
+  overflow: hidden;
+  margin-top: px2rem(-20px);
+  border-radius: px2rem(10px) px2rem(10px) 0px 0px;
+  background: #fff;
+  p{
+    font-size: px2rem(48px);
+    padding: px2rem(19px) 0;
+    height: px2rem(86px);
+    line-height: px2rem(48px);
+
+  }
+  .count{
+    padding: 0 px2rem(20px);
+    color: #fe7a00;
+    font-size: px2rem(76px);
+    height: px2rem(48px);
+    line-height: px2rem(48px);
+    display: inline-block;
+    top: px2rem(-4px);
+    position: relative;
+  }
+  .btn{
+    height: px2rem(100px);
+    line-height: px2rem(100px);
+    border-radius: px2rem(50px);
+    display: block;
+    &.btn_vip{
+      font-size: px2rem(40px);
+      background: #fe7a00;
+      color: #fff;
+      width: px2rem(625px);
+      margin: px2rem(103px) auto px2rem(126px);
+      position: fixed;
+      bottom: px2rem(30px);
+    }
+    &.btn_count{
+      background: rgba(255, 171, 0, 0);
+      border: 1px solid #323232;
+      margin: px2rem(36px) auto 0;
+      width: 100%;
+      font-size: px2rem(34px);
+      letter-spacing: px2rem(1px);
+      em{
+        color: #fe7a00;
+        font-size: px2rem(40px);
+        padding: 0 px2rem(6px);
+        top: px2rem(-3px);
+        position: relative;
+      }
+      a{
+        vertical-align: baseline;
+        color: #D70606;
+        font-size: px2rem(42px);
+        font-family: SourceHanSansSC-Bold;
+        font-weight: bold;
+        padding-left: px2rem(16px);
+      }
+    }
+  }
+}
+.share{
+  .copy{
+    display: none;
+    width: 0;
+    height: 0;
+    left: 100000px;
+  }
+}

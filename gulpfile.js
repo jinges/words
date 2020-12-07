@@ -107,7 +107,7 @@ gulp.task('connect', ['concat', 'sass', 'script', 'images', 'fonts', 'static'], 
     connect.server({
         livereload:true,
         root: paths.tmp_root,
-        host: '192.168.0.8',
+        host: '192.168.3.14',
         port: 8080
     });
 
@@ -170,6 +170,11 @@ gulp.task('FM-config', function () {
     paths = notePath;
 })
 
+gulp.task('clock-config', function () {
+    var notePath = require('./config/clock-path.js');
+    paths = notePath;
+})
+
 gulp.task('web', ['web-config', 'connect', 'watch'])
 
 gulp.task('ballot', ['ballot-config', 'connect', 'watch'], function(){
@@ -205,7 +210,10 @@ gulp.task('fc', ['FC-config', 'connect', 'watch'], function () {
 gulp.task('FM', ['FM-config', 'connect', 'watch'], function () {
  
 })
+gulp.task('clock', ['clock-config', 'connect', 'watch'], function () {
+ 
+})
 
-gulp.task('default', ['FM'], function(){
-    opn('http://192.168.0.8:8080');
+gulp.task('default', ['clock'], function(){
+    opn('http://192.168.3.14:8080');
 })

@@ -1,0 +1,47 @@
+<!--include "./components/layer/header.html"-->
+<!--include "./components/card.html"-->
+<section class="index">
+  <article class="clock_detail">
+    <p>已坚持<span class="count">1399</span>天签到</p>
+    <div href="###" class="btn btn_count">已连续签到<em>6</em>天，再坚持<em>1</em>天 <a href="##">抽奖！</a></div>
+  </article>
+  <section class="clock_tip">
+    <div>
+      <h5>签到的意义</h5>
+      <p>
+        我是保险代理人<br />
+        我一直会给保险代言<br />
+        每一天用最通俗、最实在的文字为保险代言
+      </p>
+    </div>
+    <div>
+      <h5>我会每天都坚持</h5>
+      <p>
+        这就是属于我保险心声的专栏<br />
+        从第1期开始，我就会一直坚持<br />
+        与朋友们一起<br />
+        见证我对保险事业的热爱与专注<br />
+        让我们一起表达
+      </p>
+    </div>
+  </section>
+</section>
+<!--include "./components/nav_bottom.html"-->
+<script>
+  var copy_btn = document.querySelector('.copy');
+  var flag = false;
+
+  copy_btn.addEventListener('click', function(e){
+    if(flag){return false}
+    var span = document.createElement('span');
+    span.innerText = '复制成功！';
+    span.className = 'toast';
+    document.querySelector('body').append(span);
+    flag = true;
+    setTimeout(() => {
+      document.querySelector('.toast').remove();
+      flag = false;
+    }, 1000);
+  }, false);
+</script>
+<!--include "./components/layer/footer.html"-->
